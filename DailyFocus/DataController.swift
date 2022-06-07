@@ -25,9 +25,9 @@ class DataController: ObservableObject {
         }
     }
     
+    // Creating a data controller and sample data for previews
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
-        let viewContext = dataController.container.viewContext
         
         do {
             try dataController.createSampleData()
@@ -39,6 +39,7 @@ class DataController: ObservableObject {
         
     }()
     
+    // Creating sample data
     func createSampleData() throws {
         let viewContext = container.viewContext
         
@@ -60,5 +61,12 @@ class DataController: ObservableObject {
         }
         
         try viewContext.save()
+    }
+    
+    // Save after checking for changes
+    func save () {
+        if container.viewContext.hasChanges {
+            try? container.viewContext.save()
+        }
     }
 }
