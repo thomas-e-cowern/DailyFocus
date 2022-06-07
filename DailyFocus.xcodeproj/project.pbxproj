@@ -11,6 +11,7 @@
 		41953016284FC5E100EDF104 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953015284FC5E100EDF104 /* ContentView.swift */; };
 		41953018284FC5EB00EDF104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41953017284FC5EB00EDF104 /* Assets.xcassets */; };
 		4195301B284FC5EB00EDF104 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4195301A284FC5EB00EDF104 /* Preview Assets.xcassets */; };
+		41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41953021284FCFB500EDF104 /* Main.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		41953015284FC5E100EDF104 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41953017284FC5EB00EDF104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4195301A284FC5EB00EDF104 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41953022284FCFB600EDF104 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
 				41953015284FC5E100EDF104 /* ContentView.swift */,
+				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				41953016284FC5E100EDF104 /* ContentView.swift in Sources */,
 				41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */,
 			);
@@ -339,6 +343,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41953021284FCFB500EDF104 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41953022284FCFB600EDF104 /* Main.xcdatamodel */,
+			);
+			currentVersion = 41953022284FCFB600EDF104 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 41953008284FC5E000EDF104 /* Project object */;
 }
