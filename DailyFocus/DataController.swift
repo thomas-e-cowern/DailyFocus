@@ -70,7 +70,19 @@ class DataController: ObservableObject {
         }
     }
     
+    // Delete
     func delete (_ object: NSManagedObject) {
         container.viewContext.delete(object)
+    }
+    
+    // Delete all data during testing
+    func deleteAll () {
+        let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
+        let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
+        _ = try? container.viewContext.execute(batchDeleteRequest1)
+        
+        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Project.fetchRequest()
+        let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
+        _ = try? container.viewContext.execute(batchDeleteRequest2)
     }
 }
