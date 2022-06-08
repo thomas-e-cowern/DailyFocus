@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    
     @EnvironmentObject var dataController: DataController
     
     var body: some View {

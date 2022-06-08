@@ -17,13 +17,13 @@ struct ContentView: View {
                 }
             ProjectsView(showClosedProjects: false)
                 .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+                    Image(systemName: "list.bullet")
+                    Text("Open")
                 }
             ProjectsView(showClosedProjects: true)
                 .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+                    Image(systemName: "checkmark")
+                    Text("Closed")
                 }
         }
     }
