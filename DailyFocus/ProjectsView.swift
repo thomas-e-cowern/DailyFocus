@@ -15,15 +15,33 @@ struct ProjectsView: View {
     
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
+        
+        projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed = %d"))
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(projects.wrappedValue) { project in
+                    Section(header: Text(project.title ?? "")) {
+                        ForEach(project.items?.allObjects as? [Item] ?? []) { item in
+                            Text(item.title ?? "")
+                        }
+                    }
+                }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+        }
     }
 }
 
 struct ProjectsView_Previews: PreviewProvider {
+    static var dataController = DataController.preview
+    
     static var previews: some View {
-        ProjectsView()
+        ProjectsView(showClosedProjects: false)
+            .environment(\.managedObjectContext, dataController.container.viewContext)
+            .environmentObject(dataController)
     }
 }
