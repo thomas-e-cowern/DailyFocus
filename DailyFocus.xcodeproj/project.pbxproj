@@ -14,6 +14,7 @@
 		41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41953021284FCFB500EDF104 /* Main.xcdatamodeld */; };
 		41953025284FD44000EDF104 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953024284FD43F00EDF104 /* DataController.swift */; };
 		4195302A284FE07100EDF104 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41953029284FE07100EDF104 /* CloudKit.framework */; };
+		41A470F02850EA4000062DA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A470EF2850EA4000062DA7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		41953026284FE04100EDF104 /* DailyFocus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyFocus.entitlements; sourceTree = "<group>"; };
 		41953027284FE05200EDF104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		41953029284FE07100EDF104 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		41A470EF2850EA4000062DA7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
 				41953015284FC5E100EDF104 /* ContentView.swift */,
+				41A470EF2850EA4000062DA7 /* HomeView.swift */,
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				41953025284FD44000EDF104 /* DataController.swift in Sources */,
 				41953016284FC5E100EDF104 /* ContentView.swift in Sources */,
+				41A470F02850EA4000062DA7 /* HomeView.swift in Sources */,
 				41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
