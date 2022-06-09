@@ -19,7 +19,7 @@ struct HomeView: View {
                     try? dataController.createSampleData()
                 }
             }
-            navigationBarTitle("Home")
+            .navigationTitle("Home")
         }
     }
 }
