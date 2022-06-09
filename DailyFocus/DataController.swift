@@ -9,11 +9,11 @@ import CoreData
 import SwiftUI
 
 class DataController: ObservableObject {
-    let container: NSPersistentContainer
+    let container: NSPersistentCloudKitContainer
     
     init(inMemory: Bool = false) {
         print("Data Controller Init")
-        container = NSPersistentContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main")
         
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
