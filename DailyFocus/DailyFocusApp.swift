@@ -13,6 +13,7 @@ struct DailyFocusApp: App {
     @StateObject var dataController: DataController
     
     init() {
+        print("Inside App Init")
         let dataController = DataController()
         _dataController = StateObject(wrappedValue: dataController)
     }

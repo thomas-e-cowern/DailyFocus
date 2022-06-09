@@ -9,10 +9,11 @@ import CoreData
 import SwiftUI
 
 class DataController: ObservableObject {
-    let container: NSPersistentCloudKitContainer
+    let container: NSPersistentContainer
     
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        print("Data Controller Init")
+        container = NSPersistentContainer(name: "Main")
         
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
@@ -20,6 +21,7 @@ class DataController: ObservableObject {
         
         container.loadPersistentStores { storeDescription, error in
             if let error = error {
+                print("Fatal Error")
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
         }
@@ -60,7 +62,7 @@ class DataController: ObservableObject {
             }
         }
         
-        try viewContext.save()
+        try? viewContext.save()
     }
     
     // Save after checking for changes
