@@ -44,6 +44,14 @@ extension Project {
         }
     }
     
+    var completionAmount: Double {
+        let originalItems = items?.allObjects as? [Item] ?? []
+        guard originalItems.isEmpty == false else { return 0 }
+        
+        let completedItems = originalItems.filter(\.completed)
+        return Double(completedItems.count) / Double(originalItems.count)
+    }
+    
     static var example: Project {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
