@@ -32,4 +32,9 @@ extension Project {
         
         return project
     }
+    
+    var allItems: [Item] {
+        let itemsArray = items?.allObjects as? [Item] ?? []
+        return itemsArray
+    }
 }
