@@ -31,7 +31,7 @@ struct ProjectsView: View {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: Text(project.title ?? "")) {
                         ForEach(project.projectItems) { item in
-                            
+                            ItemRowView(item: item)
                         }
                     }
                 }
