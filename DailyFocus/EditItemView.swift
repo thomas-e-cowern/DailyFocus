@@ -31,7 +31,26 @@ struct EditItemView: View {
     
     // MARK:  Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("Basic Settings")) {
+                TextField("Item Name", text: $title)
+                TextField("Description", text: $detail)
+            }
+            
+            Section(header: Text("Priority")) {
+                Picker("Priority", selection: $priority) {
+                    Text("Low").tag(1)
+                    Text("Medium").tag(2)
+                    Text("High").tag(3)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            
+            Section {
+                Toggle("Mark Completed", isOn: $completed)
+            }
+        }
+        .navigationTitle("Edit Item")
     }
 }
 
