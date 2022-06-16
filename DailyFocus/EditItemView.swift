@@ -57,6 +57,6 @@ struct EditItemView: View {
 // MARK:  Preview
 struct EditItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EditItemView()
+        EditItemView(item: Item.example)
     }
 }
