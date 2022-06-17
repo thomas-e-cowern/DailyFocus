@@ -30,7 +30,26 @@ struct EditProjectView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            // Section 1
+            Section(header: Text("Basic settings")) {
+                TextField("Project Name", text: $title.onChange(update))
+                TextField("Description of this project", text: $detail.onChange(update))
+            }
+            // Section 2
+            Section(header: Text("Section 2")) {
+                <#code#>
+            }
+            // Section 3
+            Section(header: Text("Section 3")) {
+                <#code#>
+            }
+        }
+        .navigationBarTitle("Edit Project")
+    }
+    
+    func update () {
+        
     }
 }
 

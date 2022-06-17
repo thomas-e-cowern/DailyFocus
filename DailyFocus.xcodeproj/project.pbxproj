@@ -64,7 +64,6 @@
 		41953007284FC5E000EDF104 = {
 			isa = PBXGroup;
 			children = (
-				416E9308285CB53500188473 /* EditProjectView.swift */,
 				41953012284FC5E100EDF104 /* DailyFocus */,
 				41953011284FC5E100EDF104 /* Products */,
 				41953028284FE07100EDF104 /* Frameworks */,
@@ -84,6 +83,7 @@
 			children = (
 				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
+				416E9308285CB53500188473 /* EditProjectView.swift */,
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
 				41953015284FC5E100EDF104 /* ContentView.swift */,
 				4147C552285B5870001CE424 /* EditItemView.swift */,
