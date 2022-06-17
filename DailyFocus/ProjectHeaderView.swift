@@ -33,6 +33,6 @@ struct ProjectHeaderView: View {
 
 struct ProjectHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectHeaderView()
+        ProjectHeaderView(project: Project.example)
     }
 }
