@@ -17,6 +17,7 @@ struct ProjectHeaderView: View {
                 Text(project.projectTitle)
                 
                 ProgressView(value: project.completionAmount)
+                    .accentColor(Color(project.projectColor))
             }
             
             Spacer()
@@ -25,9 +26,10 @@ struct ProjectHeaderView: View {
                 EmptyView()
             } label: {
                 Image(systemName: "square.and.pencil")
+                    .imageScale(.large)
             }
-
         }
+        .padding(.bottom, 10)
     }
 }
 

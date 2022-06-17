@@ -11,6 +11,7 @@
 		4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C554285B62C0001CE424 /* ItemRowView.swift */; };
 		4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C556285B6901001CE424 /* Binding-OnChange.swift */; };
 		416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9304285CA98200188473 /* ProjectHeaderView.swift */; };
+		416E9307285CAEEC00188473 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E9306285CAEEC00188473 /* Colors.xcassets */; };
 		419158AB2850F5AE006A77CE /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419158AA2850F5AE006A77CE /* ProjectsView.swift */; };
 		41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953013284FC5E100EDF104 /* DailyFocusApp.swift */; };
 		41953016284FC5E100EDF104 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953015284FC5E100EDF104 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		4147C554285B62C0001CE424 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		4147C556285B6901001CE424 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		416E9304285CA98200188473 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
+		416E9306285CAEEC00188473 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		419158AA2850F5AE006A77CE /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		41953010284FC5E100EDF104 /* DailyFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41953013284FC5E100EDF104 /* DailyFocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusApp.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
+				416E9306285CAEEC00188473 /* Colors.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
 				4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */,
 				4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */,
@@ -171,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416E9307285CAEEC00188473 /* Colors.xcassets in Resources */,
 				4195301B284FC5EB00EDF104 /* Preview Assets.xcassets in Resources */,
 				41953018284FC5EB00EDF104 /* Assets.xcassets in Resources */,
 			);
