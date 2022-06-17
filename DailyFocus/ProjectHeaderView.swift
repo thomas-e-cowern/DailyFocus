@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct ProjectHeaderView: View {
+    
+    @ObservedObject var project: Project
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(project.projectTitle)
+                
+                ProgressView(value: project.completionAmount)
+            }
+            
+            Spacer()
+            
+            NavigationLink {
+                EmptyView()
+            } label: {
+                Image(systemName: "square.and.pencil")
+            }
+
+        }
     }
 }
 
