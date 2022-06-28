@@ -12,6 +12,8 @@ struct EditProjectView: View {
     let project: Project
     
     @EnvironmentObject var dataController: DataController
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingDeleteConfirm = false
     
     @State private var title: String
     @State private var detail: String
@@ -39,7 +41,7 @@ struct EditProjectView: View {
             // Section 2
             Section(header: Text("Custom Project Color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(project.colors, id: \.self) { item in
+                    ForEach(Project.colors, id: \.self) { item in
                         ZStack {
                             Color(item)
                                 .aspectRatio(contentMode: .fit)
@@ -73,10 +75,13 @@ struct EditProjectView: View {
             }
         }
         .navigationBarTitle("Edit Project")
+        .onDisappear(perform: dataController.save)
     }
     
     func update () {
-        
+        project.title = title
+        project.detail = detail
+        project .color = color
     }
 }
 
