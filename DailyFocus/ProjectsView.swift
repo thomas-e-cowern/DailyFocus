@@ -14,6 +14,7 @@ struct ProjectsView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     
     @State private var showingSortOrder = false
+    @State private var sortOrder = Item.SortOrder.optimized
     
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
@@ -93,9 +94,9 @@ struct ProjectsView: View {
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
-                    .default(Text("Optimized")) {},
-                    .default(Text("Creation Date")) {},
-                    .default(Text("Title")) {}
+                    .default(Text("Optimized")) { sortOrder = .optimized },
+                    .default(Text("Creation Date")) { sortOrder = .creationDate },
+                    .default(Text("Title")) { sortOrder = .title }
                 ])
             }
         }
