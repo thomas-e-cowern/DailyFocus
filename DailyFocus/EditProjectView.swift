@@ -37,8 +37,26 @@ struct EditProjectView: View {
                 TextField("Description of this project", text: $detail.onChange(update))
             }
             // Section 2
-            Section(header: Text("Section 2")) {
-                <#code#>
+            Section(header: Text("Custom Project Color")) {
+                LazyVGrid(columns: colorColumns) {
+                    ForEach(project.color, id: \.self) { item in
+                        ZStack {
+                            Color(item)
+                                .aspectRatio(contentMode: 1, contentMode(.fit))
+                                .cornerRadius(6)
+                            
+                            if item == color {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .onTapGesture {
+                            color = item
+                            update()ß
+                        }
+                    }
+                }
             }
             // Section 3
             Section(header: Text("Section 3")) {
