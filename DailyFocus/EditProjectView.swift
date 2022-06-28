@@ -39,10 +39,10 @@ struct EditProjectView: View {
             // Section 2
             Section(header: Text("Custom Project Color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(project.color, id: \.self) { item in
+                    ForEach(project.colors, id: \.self) { item in
                         ZStack {
                             Color(item)
-                                .aspectRatio(contentMode: 1, contentMode(.fit))
+                                .aspectRatio(contentMode: .fit)
                                 .cornerRadius(6)
                             
                             if item == color {
@@ -53,14 +53,23 @@ struct EditProjectView: View {
                         }
                         .onTapGesture {
                             color = item
-                            update()ß
+                            update()
                         }
                     }
                 }
+                .padding(.vertical)
             }
             // Section 3
-            Section(header: Text("Section 3")) {
-                <#code#>
+            Section(header: Text("Closing a project moves it from the Open to Closed tab; deleting if removes the project completely")) {
+                Button(project.closed ? "Reopen this project" : "Close this project") {
+                    project.closed.toggle()
+                    update()
+                }
+                
+                Button("Delete this project") {
+                    // delete the project
+                }
+                .tint(Color.red)
             }
         }
         .navigationBarTitle("Edit Project")
