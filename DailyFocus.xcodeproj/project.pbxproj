@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410983DE286CC94E00745B84 /* Sequence-Sorting.swift */; };
 		4147C553285B5870001CE424 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C552285B5870001CE424 /* EditItemView.swift */; };
 		4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C554285B62C0001CE424 /* ItemRowView.swift */; };
 		4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C556285B6901001CE424 /* Binding-OnChange.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410983DE286CC94E00745B84 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		4147C552285B5870001CE424 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4147C554285B62C0001CE424 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		4147C556285B6901001CE424 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				41953019284FC5EB00EDF104 /* Preview Content */,
 				4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */,
 				4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */,
+				410983DE286CC94E00745B84 /* Sequence-Sorting.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */,
 				41953016284FC5E100EDF104 /* ContentView.swift in Sources */,
 				4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */,
+				410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */,
 				41A470F02850EA4000062DA7 /* HomeView.swift in Sources */,
 				41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */,
 				4198FDDA2859F8C500A5EAF7 /* Item-CoreDataHelpers.swift in Sources */,
