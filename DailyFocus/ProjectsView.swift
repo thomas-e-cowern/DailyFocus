@@ -15,6 +15,7 @@ struct ProjectsView: View {
     
     @State private var showingSortOrder = false
     @State private var sortOrder = Item.SortOrder.optimized
+    @State var sortDescriptor: NSSortDescriptor?
     
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
