@@ -70,4 +70,15 @@ extension Project {
         
         return project
     }
+    
+    func proectItems(using sortOrder: Item.SortOrder) -> [Item] {
+        switch sortOrder {
+        case .optimized:
+            return projectItemsDefaultSorted
+        case .title:
+            return projectItems.sorted { $0.itemTitle < $1.itemTitle }
+        case .creationDate:
+            return projectItems.sorted { $0.itemCreationDate < $1.itemCreationDate }
+        }
+    }
 }

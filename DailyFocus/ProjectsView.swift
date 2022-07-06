@@ -36,8 +36,7 @@ struct ProjectsView: View {
         NavigationView {
             Group {
                 if projects.wrappedValue.count == 0 {
-                    Text("There is nothing to see here.")
-                        .foregroundColor(.secondary)
+                    SelectSomethingView()
                 } else {
                     List {
                         ForEach(projects.wrappedValue) { project in
@@ -46,7 +45,7 @@ struct ProjectsView: View {
                                     ItemRowView(project: project, item: item)
                                 }
                                 .onDelete { offsets in
-                                    let allItems = project.projectItems
+                                    let allItems = project.projectItems(using: sortOrder)
                                     
                                     for offset in offsets {
 
@@ -107,17 +106,6 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
-        }
-    }
-    
-    func items(for project: Project) -> [Item] {
-        switch sortOrder {
-        case .optimized:
-            return project.projectItemsDefaultSorted
-        case .title:
-            return project.projectItems.sorted { $0.itemTitle < $1.itemTitle }
-        case .creationDate:
-            return project.projectItems.sorted { $0.itemCreationDate < $1.itemCreationDate }
         }
     }
 }
