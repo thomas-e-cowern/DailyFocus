@@ -24,6 +24,7 @@
 		4195302A284FE07100EDF104 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41953029284FE07100EDF104 /* CloudKit.framework */; };
 		4198FDDA2859F8C500A5EAF7 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */; };
 		4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */; };
+		419B2CF72876229000E45522 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B2CF62876228F00E45522 /* SelectSomethingView.swift */; };
 		41A470F02850EA4000062DA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A470EF2850EA4000062DA7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		41953029284FE07100EDF104 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		419B2CF62876228F00E45522 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		41A470EF2850EA4000062DA7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
 				41A470EF2850EA4000062DA7 /* HomeView.swift */,
 				419158AA2850F5AE006A77CE /* ProjectsView.swift */,
+				419B2CF62876228F00E45522 /* SelectSomethingView.swift */,
 				4147C554285B62C0001CE424 /* ItemRowView.swift */,
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
@@ -199,6 +202,7 @@
 				4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */,
 				416E9309285CB53500188473 /* EditProjectView.swift in Sources */,
 				41953025284FD44000EDF104 /* DataController.swift in Sources */,
+				419B2CF72876229000E45522 /* SelectSomethingView.swift in Sources */,
 				4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */,
 				41953016284FC5E100EDF104 /* ContentView.swift in Sources */,
 				4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */,
