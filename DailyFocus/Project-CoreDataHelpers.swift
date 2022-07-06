@@ -71,7 +71,7 @@ extension Project {
         return project
     }
     
-    func proectItems(using sortOrder: Item.SortOrder) -> [Item] {
+    func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
         switch sortOrder {
         case .optimized:
             return projectItemsDefaultSorted

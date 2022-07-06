@@ -41,7 +41,7 @@ struct ProjectsView: View {
                     List {
                         ForEach(projects.wrappedValue) { project in
                             Section(header: ProjectHeaderView(project: project)) {
-                                ForEach(items(for: project)) { item in
+                                ForEach(project.projectItems(using: sortOrder)) { item in
                                     ItemRowView(project: project, item: item)
                                 }
                                 .onDelete { offsets in
