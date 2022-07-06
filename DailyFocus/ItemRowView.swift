@@ -29,7 +29,11 @@ struct ItemRowView: View {
     // MARK:  Body
     var body: some View {
         NavigationLink(destination: EditItemView(item: item)) {
-            Text(item.itemTitle)
+            Label {
+                Text(item.itemTitle)
+            } icon: {
+                icon
+            }
         }
     }
 }
