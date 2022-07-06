@@ -34,64 +34,71 @@ struct ProjectsView: View {
     // MARK:  Body
     var body: some View {
         NavigationView {
-            List {
-                ForEach(projects.wrappedValue) { project in
-                    Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(items(for: project)) { item in
-                            ItemRowView(project: project, item: item)
-                        }
-                        .onDelete { offsets in
-                            let allItems = project.projectItems
-                            
-                            for offset in offsets {
+            Group {
+                if projects.wrappedValue.count == 0 {
+                    Text("There is nothing to see here.")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(projects.wrappedValue) { project in
+                            Section(header: ProjectHeaderView(project: project)) {
+                                ForEach(items(for: project)) { item in
+                                    ItemRowView(project: project, item: item)
+                                }
+                                .onDelete { offsets in
+                                    let allItems = project.projectItems
+                                    
+                                    for offset in offsets {
 
-                                let item = allItems[offset]
-                                dataController.delete(item)
-                            }
-                            
-                            dataController.save()
-                        }
-                        if showClosedProjects == false {
-                            Button {
-                                withAnimation {
-                                    let item = Item(context: managedObjectContext)
-                                    item.project = project
-                                    item.creationDate = Date()
+                                        let item = allItems[offset]
+                                        dataController.delete(item)
+                                    }
+                                    
                                     dataController.save()
                                 }
+                                if showClosedProjects == false {
+                                    Button {
+                                        withAnimation {
+                                            let item = Item(context: managedObjectContext)
+                                            item.project = project
+                                            item.creationDate = Date()
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add New Item", systemImage: "plus")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .listStyle(InsetGroupedListStyle())
+                    .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            if showClosedProjects == false {
+                                Button {
+                                    withAnimation {
+                                        let project = Project(context: managedObjectContext)
+                                        project.closed = false
+                                        project.creationDate = Date()
+                                        dataController.save()
+                                    }
+                                } label: {
+                                    Label("Add Project", systemImage: "plus")
+                                }
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {
+                                showingSortOrder.toggle()
                             } label: {
-                                Label("Add New Item", systemImage: "plus")
+                                Label("Sort", systemImage: "arrow.up.arrow.down")
                             }
                         }
+                        
                     }
                 }
-            }
-            .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    if showClosedProjects == false {
-                        Button {
-                            withAnimation {
-                                let project = Project(context: managedObjectContext)
-                                project.closed = false
-                                project.creationDate = Date()
-                                dataController.save()
-                            }
-                        } label: {
-                            Label("Add Project", systemImage: "plus")
-                        }
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        showingSortOrder.toggle()
-                    } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
-                    }
-                }
-                
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
@@ -123,5 +130,6 @@ struct ProjectsView_Previews: PreviewProvider {
         ProjectsView(showClosedProjects: false)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
