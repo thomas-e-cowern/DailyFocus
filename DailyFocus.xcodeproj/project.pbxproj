@@ -15,6 +15,7 @@
 		416E9307285CAEEC00188473 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E9306285CAEEC00188473 /* Colors.xcassets */; };
 		416E9309285CB53500188473 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9308285CB53500188473 /* EditProjectView.swift */; };
 		419158AB2850F5AE006A77CE /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419158AA2850F5AE006A77CE /* ProjectsView.swift */; };
+		419307DC2877424500D172E7 /* Bundle-Decodable.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */; };
 		41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953013284FC5E100EDF104 /* DailyFocusApp.swift */; };
 		41953016284FC5E100EDF104 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953015284FC5E100EDF104 /* ContentView.swift */; };
 		41953018284FC5EB00EDF104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41953017284FC5EB00EDF104 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		416E9306285CAEEC00188473 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		416E9308285CB53500188473 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		419158AA2850F5AE006A77CE /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swfit.swift"; sourceTree = "<group>"; };
 		41953010284FC5E100EDF104 /* DailyFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41953013284FC5E100EDF104 /* DailyFocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusApp.swift; sourceTree = "<group>"; };
 		41953015284FC5E100EDF104 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
 				41A470EF2850EA4000062DA7 /* HomeView.swift */,
 				419158AA2850F5AE006A77CE /* ProjectsView.swift */,
+				419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */,
 				419B2CF62876228F00E45522 /* SelectSomethingView.swift */,
 				4147C554285B62C0001CE424 /* ItemRowView.swift */,
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
@@ -208,6 +211,7 @@
 				4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */,
 				410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */,
 				41A470F02850EA4000062DA7 /* HomeView.swift in Sources */,
+				419307DC2877424500D172E7 /* Bundle-Decodable.swfit.swift in Sources */,
 				41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */,
 				4198FDDA2859F8C500A5EAF7 /* Item-CoreDataHelpers.swift in Sources */,
 				4147C553285B5870001CE424 /* EditItemView.swift in Sources */,
