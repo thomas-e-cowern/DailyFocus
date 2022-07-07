@@ -18,6 +18,7 @@
 		419307DC2877424500D172E7 /* Bundle-Decodable.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */; };
 		419307DE2877477F00D172E7 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 419307DD2877477F00D172E7 /* Awards.json */; };
 		419307E028775B5500D172E7 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419307DF28775B5500D172E7 /* Award.swift */; };
+		419307E228775C4700D172E7 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419307E128775C4700D172E7 /* AwardsView.swift */; };
 		41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953013284FC5E100EDF104 /* DailyFocusApp.swift */; };
 		41953016284FC5E100EDF104 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953015284FC5E100EDF104 /* ContentView.swift */; };
 		41953018284FC5EB00EDF104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41953017284FC5EB00EDF104 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swfit.swift"; sourceTree = "<group>"; };
 		419307DD2877477F00D172E7 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		419307DF28775B5500D172E7 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		419307E128775C4700D172E7 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		41953010284FC5E100EDF104 /* DailyFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41953013284FC5E100EDF104 /* DailyFocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusApp.swift; sourceTree = "<group>"; };
 		41953015284FC5E100EDF104 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				419307DD2877477F00D172E7 /* Awards.json */,
 				419307DF28775B5500D172E7 /* Award.swift */,
+				419307E128775C4700D172E7 /* AwardsView.swift */,
 				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
 				416E9308285CB53500188473 /* EditProjectView.swift */,
@@ -208,6 +211,7 @@
 			files = (
 				419158AB2850F5AE006A77CE /* ProjectsView.swift in Sources */,
 				416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */,
+				419307E228775C4700D172E7 /* AwardsView.swift in Sources */,
 				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */,
 				416E9309285CB53500188473 /* EditProjectView.swift in Sources */,
