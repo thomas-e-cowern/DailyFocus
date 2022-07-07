@@ -13,7 +13,7 @@ struct Award: Decodable, Identifiable {
     let description: String
     let color: String
     let criterion: String
-    let value: String
+    let value: Int
     let image: String
     
     static let allAwards = Bundle.main.decode([Award].self, from: "Awards.json")

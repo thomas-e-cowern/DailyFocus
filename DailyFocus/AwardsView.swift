@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AwardsView: View {
     
+    static let tag: String? = "Awards"
+    
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }

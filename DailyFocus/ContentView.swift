@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @SceneStorage("selectedView") var selectedView: String?
     
+    
     var body: some View {
         TabView(selection: $selectedView) {
             HomeView()
@@ -30,6 +31,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "checkmark")
                     Text("Closed")
+                }
+            AwardsView()
+                .tag(AwardsView.tag)
+                .tabItem {
+                    Image(systemName: "rosette")
+                    Text("Awards")
                 }
         }
     }
