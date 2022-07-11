@@ -12,6 +12,10 @@ struct HomeView: View {
     
     static let tag: String? = "Home"
     
+    var projectRows: [GridItem] {
+        [GridItem(.fixed(100))]
+    }
+    
     @EnvironmentObject var dataController: DataController
     @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)], predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
     let items: FetchRequest<Item>
@@ -31,7 +35,25 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView {
- 
+                VStack(alignment: .leading) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHGrid(rows: projectRows) {
+                            ForEach(projects) { project in
+                                VStack(alignment: .leading) {
+                                    Text("\(project.projectItems.count) items")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    
+                                    Text(project.projectTitle)
+                                        .font(.title2)
+                                    
+                                    ProgressView(value: project.completionAmount)
+                                        .tint(Color(project.projectColor))
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
