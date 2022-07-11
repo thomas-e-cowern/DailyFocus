@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410983DE286CC94E00745B84 /* Sequence-Sorting.swift */; };
+		4146F519287C6220007680E2 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146F518287C621F007680E2 /* Color-Additions.swift */; };
 		4147C553285B5870001CE424 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C552285B5870001CE424 /* EditItemView.swift */; };
 		4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C554285B62C0001CE424 /* ItemRowView.swift */; };
 		4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C556285B6901001CE424 /* Binding-OnChange.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		410983DE286CC94E00745B84 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
+		4146F518287C621F007680E2 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		4147C552285B5870001CE424 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4147C554285B62C0001CE424 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		4147C556285B6901001CE424 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				419307DD2877477F00D172E7 /* Awards.json */,
 				419307DF28775B5500D172E7 /* Award.swift */,
 				419307E128775C4700D172E7 /* AwardsView.swift */,
+				4146F518287C621F007680E2 /* Color-Additions.swift */,
 				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
 				416E9308285CB53500188473 /* EditProjectView.swift */,
@@ -214,6 +217,7 @@
 				419307E228775C4700D172E7 /* AwardsView.swift in Sources */,
 				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */,
+				4146F519287C6220007680E2 /* Color-Additions.swift in Sources */,
 				416E9309285CB53500188473 /* EditProjectView.swift in Sources */,
 				41953025284FD44000EDF104 /* DataController.swift in Sources */,
 				419B2CF72876229000E45522 /* SelectSomethingView.swift in Sources */,
