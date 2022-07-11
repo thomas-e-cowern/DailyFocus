@@ -12,13 +12,15 @@ struct HomeView: View {
     static let tag: String? = "Home"
     
     @EnvironmentObject var dataController: DataController
+    @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)], predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
+    
     
     var body: some View {
         NavigationView {
             ScrollView {
  
             }
-            .background(Color.systemGroupedBackground)
+            .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
         }
     }
@@ -32,5 +34,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
