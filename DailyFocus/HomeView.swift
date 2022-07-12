@@ -50,7 +50,7 @@ struct HomeView: View {
                                     ProgressView(value: project.completionAmount)
                                         .tint(Color(project.projectColor))
                                 }
-                                .padding([.horizontal, .top])
+                                .padding()
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
@@ -58,9 +58,25 @@ struct HomeView: View {
                         }
                     }
                 }
-            }
+            } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+
+        }
+    }
+}
+
+@ViewBuilder func list(_ title: String, for items: FetchedResults<Item>.SubSequence) -> some View {
+    if items.isEmpty {
+        EmptyView()
+    } else {
+        Text(title)
+            .font(.headline)
+            .foregroundColor(.secondary)
+            .padding(.top)
+        
+        ForEach(items) { item in
+            // more to come
         }
     }
 }
