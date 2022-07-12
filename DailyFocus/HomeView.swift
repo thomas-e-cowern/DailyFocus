@@ -55,17 +55,21 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
                             }
-                        }
+                        } // End of LazyHGrid
+                        .padding([.horizontal, .top])
+                        .fixedSize(horizontal: false, vertical: true)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        list("Up Next", for: items.wrappedValue.prefix(3))
+                        list("More to Explore", for: items.wrappedValue.dropFirst(3))
                     }
                 }
             } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
 
-            VStack(alignment: .leading) {
-                list("Up Next", for: items.wrappedValue.prefix(3))
-                list("More to Explore", for: items.wrappedValue.dropFirst(3))
-            }
+    
         }
     }
 }
@@ -90,13 +94,18 @@ struct HomeView: View {
                         Text(item.itemTitle)
                             .font(.title2)
                             .foregroundColor(.primary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         if item.itemDetail.isEmpty == false {
                             Text(item.itemDetail)
                                 .foregroundColor(.secondary)
                         }
                     }
-                }
+                } // End of HStack
+                .padding()
+                .background(Color.secondarySystemGroupedBackground)
+                .cornerRadius(10)
+                .shadow(color: Color.black.opacity(0.2), radius: 5)
             }
         }
     }
