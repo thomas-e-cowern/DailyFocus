@@ -50,7 +50,7 @@ struct HomeView: View {
                                     ProgressView(value: project.completionAmount)
                                         .tint(Color(project.projectColor))
                                 }
-                                .padding()
+                                .padding([.horizontal, .top])
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
