@@ -62,6 +62,10 @@ struct HomeView: View {
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
 
+            VStack(alignment: .leading) {
+                list("Up Next", for: items.wrappedValue.prefix(3))
+                list("More to Explore", for: items.wrappedValue.dropFirst(3))
+            }
         }
     }
 }
@@ -76,7 +80,24 @@ struct HomeView: View {
             .padding(.top)
         
         ForEach(items) { item in
-            // more to come
+            NavigationLink(destination: EditItemView(item: item)) {
+                HStack(spacing: 20) {
+                    Circle()
+                        .stroke(Color(item.project?.projectColor ?? "Light Blue"), lineWidth: 3)
+                        .frame(width: 44, height: 44)
+                    
+                    VStack(alignment: .leading) {
+                        Text(item.itemTitle)
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                        
+                        if item.itemDetail.isEmpty == false {
+                            Text(item.itemDetail)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+            }
         }
     }
 }
