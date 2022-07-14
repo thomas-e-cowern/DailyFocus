@@ -64,12 +64,11 @@ struct HomeView: View {
                         list("Up Next", for: items.wrappedValue.prefix(3))
                         list("More to Explore", for: items.wrappedValue.dropFirst(3))
                     }
+                    .padding()
                 }
             } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
-
-    
         }
     }
 }
