@@ -47,6 +47,9 @@
 		4183B64B28808B32002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4183B64E28808C22002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		4183B65128809AEE002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
+		4183B65328809D55002A78A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4183B65428809D63002A78A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		4183B65528809DA5002A78A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		419158AA2850F5AE006A77CE /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swfit.swift"; sourceTree = "<group>"; };
 		419307DF28775B5500D172E7 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
@@ -187,8 +190,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				hu,
+				Base,
 			);
 			mainGroup = 41953007284FC5E000EDF104;
 			productRefGroup = 41953011284FC5E100EDF104 /* Products */;
@@ -250,6 +253,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4183B64B28808B32002A78A2 /* hu */,
+				4183B65328809D55002A78A2 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -258,6 +262,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4183B64E28808C22002A78A2 /* hu */,
+				4183B65428809D63002A78A2 /* en */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4183B65128809AEE002A78A2 /* hu */,
+				4183B65528809DA5002A78A2 /* en */,
 			);
 			name = Awards.json;
 			sourceTree = "<group>";
