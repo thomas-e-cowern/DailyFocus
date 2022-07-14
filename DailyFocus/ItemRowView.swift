@@ -28,6 +28,7 @@ struct ItemRowView: View {
     
     // MARK:  Body
     var body: some View {
+        // Link to edit item view
         NavigationLink(destination: EditItemView(item: item)) {
             Label {
                 Text(item.itemTitle)
