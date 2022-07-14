@@ -13,11 +13,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>lld</string>
 			<key>zero</key>
-			<string>No items</string>
+			<string>Üres</string>
 			<key>one</key>
-			<string>1 item</string>
+			<string>1 tétel</string>
 			<key>other</key>
-			<string>%lld items</string>
+			<string>%lld tétel</string>
 		</dict>
 	</dict>
 </dict>
