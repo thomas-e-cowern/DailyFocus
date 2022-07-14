@@ -34,7 +34,7 @@ struct EditProjectView: View {
     var body: some View {
         Form {
             // Section 1
-            Section(header: Text("Basic settings")) {
+            Section(header: Text("Basic Settings")) {
                 TextField("Project Name", text: $title.onChange(update))
                 TextField("Description of this project", text: $detail.onChange(update))
             }
