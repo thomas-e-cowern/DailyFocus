@@ -15,8 +15,8 @@
 		416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9304285CA98200188473 /* ProjectHeaderView.swift */; };
 		416E9307285CAEEC00188473 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E9306285CAEEC00188473 /* Colors.xcassets */; };
 		416E9309285CB53500188473 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9308285CB53500188473 /* EditProjectView.swift */; };
-		4183B64728805931002A78A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64628805931002A78A2 /* Localizable.strings */; };
 		4183B64928806CD7002A78A2 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64828806CD7002A78A2 /* Localizable.stringsdict */; };
+		4183B64A28808B32002A78A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64C28808B32002A78A2 /* Localizable.strings */; };
 		419158AB2850F5AE006A77CE /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419158AA2850F5AE006A77CE /* ProjectsView.swift */; };
 		419307DC2877424500D172E7 /* Bundle-Decodable.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */; };
 		419307DE2877477F00D172E7 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 419307DD2877477F00D172E7 /* Awards.json */; };
@@ -44,8 +44,8 @@
 		416E9304285CA98200188473 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		416E9306285CAEEC00188473 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		416E9308285CB53500188473 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
-		4183B64628805931002A78A2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4183B64828806CD7002A78A2 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		4183B64B28808B32002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		419158AA2850F5AE006A77CE /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swfit.swift"; sourceTree = "<group>"; };
 		419307DD2877477F00D172E7 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				416E9304285CA98200188473 /* ProjectHeaderView.swift */,
 				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
 				41A470EF2850EA4000062DA7 /* HomeView.swift */,
-				4183B64628805931002A78A2 /* Localizable.strings */,
+				4183B64C28808B32002A78A2 /* Localizable.strings */,
 				4183B64828806CD7002A78A2 /* Localizable.stringsdict */,
 				419158AA2850F5AE006A77CE /* ProjectsView.swift */,
 				419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */,
@@ -188,6 +188,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hu,
 			);
 			mainGroup = 41953007284FC5E000EDF104;
 			productRefGroup = 41953011284FC5E100EDF104 /* Products */;
@@ -204,7 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4183B64728805931002A78A2 /* Localizable.strings in Resources */,
+				4183B64A28808B32002A78A2 /* Localizable.strings in Resources */,
 				416E9307285CAEEC00188473 /* Colors.xcassets in Resources */,
 				419307DE2877477F00D172E7 /* Awards.json in Resources */,
 				4195301B284FC5EB00EDF104 /* Preview Assets.xcassets in Resources */,
@@ -243,6 +244,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4183B64C28808B32002A78A2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4183B64B28808B32002A78A2 /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4195301C284FC5EB00EDF104 /* Debug */ = {
