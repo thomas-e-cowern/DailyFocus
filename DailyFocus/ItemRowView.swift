@@ -21,7 +21,7 @@ struct ItemRowView: View {
             return Image(systemName: "exclamationmark.triangle")
                 .foregroundColor(Color(project.projectColor))
         } else {
-            return Image(systemName: "checkmark.cirlce")
+            return Image(systemName: "checkmark.circle")
                 .foregroundColor(.clear)
         }
     }
