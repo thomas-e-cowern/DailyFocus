@@ -54,6 +54,7 @@ struct HomeView: View {
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
+                                .accessibilityElement(children: .combine)
                             }
                         } // End of LazyHGrid
                         .padding([.horizontal, .top])
@@ -65,7 +66,7 @@ struct HomeView: View {
                         list("More to Explore", for: items.wrappedValue.dropFirst(3))
                     }
                     .padding()
-                }
+                } // End of VStack
             } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
