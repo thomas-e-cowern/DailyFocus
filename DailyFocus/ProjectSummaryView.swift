@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct ProjectSummaryView: View {
+    
+    @ObservedObject var project: Project
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("\(project.projectItems.count) items")
+                .font(.caption)
+                .foregroundColor(.secondary)
+            
+            Text(project.projectTitle)
+                .font(.title2)
+            
+            ProgressView(value: project.completionAmount)
+                .tint(Color(project.projectColor))
+        }
+        .padding()
+        .background(Color.secondarySystemGroupedBackground)
+        .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.2), radius: 5)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(project.label)
     }
 }
 
 struct ProjectSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectSummaryView()
+        ProjectSummaryView(project: Project.example)
     }
 }
