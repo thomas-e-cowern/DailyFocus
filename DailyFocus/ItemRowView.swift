@@ -26,6 +26,16 @@ struct ItemRowView: View {
         }
     }
     
+    var label: Text {
+        if item.completed {
+            return Text("\(item.itemTitle), completed")
+        } else if item.priority == 3 {
+            return Text("\(item.itemTitle), high priority")
+        } else {
+            return Text(item.itemTitle)
+        }
+    }
+    
     // MARK:  Body
     var body: some View {
         // Link to edit item view
@@ -35,6 +45,7 @@ struct ItemRowView: View {
             } icon: {
                 icon
             }
+            .accessibilityLabel(label)
         }
     }
 }
