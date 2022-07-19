@@ -63,12 +63,7 @@ struct ProjectsView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             if showClosedProjects == false {
                                 Button {
-                                    withAnimation {
-                                        let project = Project(context: managedObjectContext)
-                                        project.closed = false
-                                        project.creationDate = Date()
-                                        dataController.save()
-                                    }
+                                    addProject()
                                 } label: {
                                     Label("Add Project", systemImage: "plus")
                                 }
@@ -115,6 +110,15 @@ struct ProjectsView: View {
         }
         
         dataController.save()
+    }
+    
+    func addProject () {
+        withAnimation {
+            let project = Project(context: managedObjectContext)
+            project.closed = false
+            project.creationDate = Date()
+            dataController.save()
+        }
     }
 }
 
