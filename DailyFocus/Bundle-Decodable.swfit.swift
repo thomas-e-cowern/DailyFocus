@@ -31,7 +31,7 @@ extension Bundle {
         do {
             return try decoder.decode(T.self, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {
-            fatalError("Failed to decode \(file): missing key '\(key.stringValue)' not found – \(context.debugDescription)")
+            fatalError("Failed to decode \(file): missing key '\(key.stringValue)' – \(context.debugDescription)")
         } catch DecodingError.typeMismatch(_, let context) {
             fatalError("Failed to decode \(file): type mismatch – \(context.debugDescription)")
         } catch DecodingError.valueNotFound(let type, let context) {

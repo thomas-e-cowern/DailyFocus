@@ -46,6 +46,7 @@ struct EditProjectView: View {
                 .padding(.vertical)
             }
             // Section 3
+            // swiftlint:disable:next line_length
             Section(header: Text("Closing a project moves it from the Open to Closed tab; deleting if removes the project completely")) {
                 Button(project.closed ? "Reopen this project" : "Close this project") {
                     project.closed.toggle()
@@ -61,12 +62,16 @@ struct EditProjectView: View {
         .navigationBarTitle("Edit Project")
         .onDisappear(perform: dataController.save)
         .alert(isPresented: $showingDeleteConfirm) {
-            Alert(title: Text("Delete project?"), message: Text("Are you sure you want to delete this project?  You will also delete all the items it contains."), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
+            Alert(
+                title: Text("Delete project?"),
+                // swiftlint:disable:next line_length
+                message: Text("Are you sure you want to delete this project?  You will also delete all the items it contains."),
+                primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel()
+            )
         }
     }
 
-
-    // MARK:  Methods
+    // MARK: Methods
     func update () {
         project.title = title
         project.detail = detail
