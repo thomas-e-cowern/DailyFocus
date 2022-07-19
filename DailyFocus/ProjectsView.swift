@@ -57,12 +57,7 @@ struct ProjectsView: View {
                                 }
                                 if showClosedProjects == false {
                                     Button {
-                                        withAnimation {
-                                            let item = Item(context: managedObjectContext)
-                                            item.project = project
-                                            item.creationDate = Date()
-                                            dataController.save()
-                                        }
+                                        addItem(to: project)
                                     } label: {
                                         Label("Add New Item", systemImage: "plus")
                                     }
@@ -106,6 +101,15 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
+        }
+    }
+    
+    func addItem(to project: Project) {
+        withAnimation {
+            let item = Item(context: managedObjectContext)
+            item.project = project
+            item.creationDate = Date()
+            dataController.save()
         }
     }
 }
