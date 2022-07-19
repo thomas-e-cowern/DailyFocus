@@ -28,7 +28,12 @@ struct ProjectsView: View {
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
 
-        projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
+        projects = FetchRequest<Project>(
+            entity: Project.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
+            predicate: NSPredicate(format: "closed = %d",
+            showClosedProjects)
+        )
     }
 
     // MARK: Computed properties
@@ -115,12 +120,12 @@ struct ProjectsView: View {
 
     func delete(_ offsets: IndexSet, from project: Project) {
         let allItems = project.projectItems(using: sortOrder)
-        
+
         for offset in offsets {
             let item = allItems[offset]
             dataController.delete(item)
         }
-        
+
         dataController.save()
     }
 
