@@ -41,29 +41,7 @@ struct EditProjectView: View {
             // Section 2
             Section(header: Text("Custom Project Color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(Project.colors, id: \.self) { item in
-                        ZStack {
-                            Color(item)
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(6)
-                            
-                            if item == color {
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundColor(.white)
-                                    .font(.largeTitle)
-                            }
-                        }
-                        .onTapGesture {
-                            color = item
-                            update()
-                        }
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityAddTraits(
-                        
-                            item == color ? [.isButton, .isSelected] : .isButton
-                        )
-                        .accessibilityLabel(LocalizedStringKey(item))
-                    }
+                    ForEach(Project.colors, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
             }
@@ -87,6 +65,8 @@ struct EditProjectView: View {
         }
     }
     
+    
+    // MARK:  Methods
     func update () {
         project.title = title
         project.detail = detail
@@ -96,6 +76,30 @@ struct EditProjectView: View {
     func delete () {
         dataController.delete(project)
         presentationMode.wrappedValue.dismiss()
+    }
+    
+    func colorButton(for item: String) -> some View {
+        ZStack {
+            Color(item)
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(6)
+            
+            if item == color {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+            }
+        }
+        .onTapGesture {
+            color = item
+            update()
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(
+        
+            item == color ? [.isButton, .isSelected] : .isButton
+        )
+        .accessibilityLabel(LocalizedStringKey(item))
     }
 }
 
