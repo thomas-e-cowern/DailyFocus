@@ -50,6 +50,12 @@ struct HomeView: View {
                     }
                     .padding()
                 } // End of VStack
+                .toolbar {
+                    Button("Add Data") {
+                        dataController.deleteAll()
+                        try? dataController.createSampleData()
+                    }
+                }
             } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
@@ -57,10 +63,7 @@ struct HomeView: View {
     }
 }
 
-//Button("Add Data") {
-//    dataController.deleteAll()
-//    try? dataController.createSampleData()
-//}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
