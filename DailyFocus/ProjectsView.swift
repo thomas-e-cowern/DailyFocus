@@ -31,55 +31,67 @@ struct ProjectsView: View {
         projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
     }
     
+    // MARK:  Computed properties
+    var projectList: some View {
+        List {
+            ForEach(projects.wrappedValue) { project in
+                Section(header: ProjectHeaderView(project: project)) {
+                    ForEach(project.projectItems(using: sortOrder)) { item in
+                        ItemRowView(project: project, item: item)
+                    }
+                    .onDelete { offsets in
+                        delete(offsets, from: project)
+                    }
+                    if showClosedProjects == false {
+                        Button {
+                            addItem(to: project)
+                        } label: {
+                            Label("Add New Item", systemImage: "plus")
+                        }
+                    }
+                }
+            }
+        }
+        .listStyle(InsetGroupedListStyle())
+    }
+    
+    var addProjectToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            if showClosedProjects == false {
+                Button {
+                    addProject()
+                } label: {
+                    Label("Add Project", systemImage: "plus")
+                }
+            }
+        }
+    }
+    
+    var sortOrderToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button {
+                showingSortOrder.toggle()
+            } label: {
+                Label("Sort", systemImage: "arrow.up.arrow.down")
+            }
+        }
+    }
+    
     // MARK:  Body
     var body: some View {
         NavigationView {
             Group {
-                if projects.wrappedValue.count == 0 {
-                    SelectSomethingView()
+                if projects.wrappedValue.isEmpty {
+                    Text("There's nothing here right now")
+                        .foregroundColor(.secondary)
                 } else {
-                    List {
-                        ForEach(projects.wrappedValue) { project in
-                            Section(header: ProjectHeaderView(project: project)) {
-                                ForEach(project.projectItems(using: sortOrder)) { item in
-                                    ItemRowView(project: project, item: item)
-                                }
-                                .onDelete { offsets in
-                                    delete(offsets, from: project)
-                                }
-                                if showClosedProjects == false {
-                                    Button {
-                                        addItem(to: project)
-                                    } label: {
-                                        Label("Add New Item", systemImage: "plus")
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .listStyle(InsetGroupedListStyle())
-                    .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            if showClosedProjects == false {
-                                Button {
-                                    addProject()
-                                } label: {
-                                    Label("Add Project", systemImage: "plus")
-                                }
-                            }
-                        }
-                        
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button {
-                                showingSortOrder.toggle()
-                            } label: {
-                                Label("Sort", systemImage: "arrow.up.arrow.down")
-                            }
-                        }
-                        
-                    }
+                    projectList
                 }
+            }
+            .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .toolbar {
+                addProjectToolbarItem
+                sortOrderToolbarItem
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
