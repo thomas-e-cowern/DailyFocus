@@ -17,6 +17,7 @@
 		416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9304285CA98200188473 /* ProjectHeaderView.swift */; };
 		416E9307285CAEEC00188473 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E9306285CAEEC00188473 /* Colors.xcassets */; };
 		416E9309285CB53500188473 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E9308285CB53500188473 /* EditProjectView.swift */; };
+		417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FE1392888528500F23E2E /* DailyFocusTests.swift */; };
 		4183B64A28808B32002A78A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64C28808B32002A78A2 /* Localizable.strings */; };
 		4183B64D28808C22002A78A2 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64F28808C22002A78A2 /* Localizable.stringsdict */; };
 		4183B65028809AEE002A78A2 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 4183B65228809AEE002A78A2 /* Awards.json */; };
@@ -37,6 +38,16 @@
 		41A470F02850EA4000062DA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A470EF2850EA4000062DA7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		417FE13B2888528500F23E2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41953008284FC5E000EDF104 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4195300F284FC5E100EDF104;
+			remoteInfo = DailyFocus;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		410983DE286CC94E00745B84 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		4146F518287C621F007680E2 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
@@ -48,6 +59,8 @@
 		416E9304285CA98200188473 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		416E9306285CAEEC00188473 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		416E9308285CB53500188473 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		417FE1372888528500F23E2E /* DailyFocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyFocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		417FE1392888528500F23E2E /* DailyFocusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusTests.swift; sourceTree = "<group>"; };
 		4183B64B28808B32002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4183B64E28808C22002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		4183B65128809AEE002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
@@ -75,6 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		417FE1342888528500F23E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4195300D284FC5E100EDF104 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,10 +172,19 @@
 			path = Localizations;
 			sourceTree = "<group>";
 		};
+		417FE1382888528500F23E2E /* DailyFocusTests */ = {
+			isa = PBXGroup;
+			children = (
+				417FE1392888528500F23E2E /* DailyFocusTests.swift */,
+			);
+			path = DailyFocusTests;
+			sourceTree = "<group>";
+		};
 		41953007284FC5E000EDF104 = {
 			isa = PBXGroup;
 			children = (
 				41953012284FC5E100EDF104 /* DailyFocus */,
+				417FE1382888528500F23E2E /* DailyFocusTests */,
 				41953011284FC5E100EDF104 /* Products */,
 				41953028284FE07100EDF104 /* Frameworks */,
 			);
@@ -165,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				41953010284FC5E100EDF104 /* DailyFocus.app */,
+				417FE1372888528500F23E2E /* DailyFocusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +236,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		417FE1362888528500F23E2E /* DailyFocusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417FE13F2888528500F23E2E /* Build configuration list for PBXNativeTarget "DailyFocusTests" */;
+			buildPhases = (
+				417FE1332888528500F23E2E /* Sources */,
+				417FE1342888528500F23E2E /* Frameworks */,
+				417FE1352888528500F23E2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				417FE13C2888528500F23E2E /* PBXTargetDependency */,
+			);
+			name = DailyFocusTests;
+			productName = DailyFocusTests;
+			productReference = 417FE1372888528500F23E2E /* DailyFocusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4195300F284FC5E100EDF104 /* DailyFocus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4195301E284FC5EB00EDF104 /* Build configuration list for PBXNativeTarget "DailyFocus" */;
@@ -234,6 +282,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					417FE1362888528500F23E2E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4195300F284FC5E100EDF104;
+					};
 					4195300F284FC5E100EDF104 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -254,11 +306,19 @@
 			projectRoot = "";
 			targets = (
 				4195300F284FC5E100EDF104 /* DailyFocus */,
+				417FE1362888528500F23E2E /* DailyFocusTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		417FE1352888528500F23E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4195300E284FC5E100EDF104 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +356,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		417FE1332888528500F23E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4195300C284FC5E100EDF104 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +393,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		417FE13C2888528500F23E2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4195300F284FC5E100EDF104 /* DailyFocus */;
+			targetProxy = 417FE13B2888528500F23E2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4183B64C28808B32002A78A2 /* Localizable.strings */ = {
@@ -357,6 +433,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		417FE13D2888528500F23E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.DailyFocusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyFocus.app/DailyFocus";
+			};
+			name = Debug;
+		};
+		417FE13E2888528500F23E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.DailyFocusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyFocus.app/DailyFocus";
+			};
+			name = Release;
+		};
 		4195301C284FC5EB00EDF104 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,6 +650,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		417FE13F2888528500F23E2E /* Build configuration list for PBXNativeTarget "DailyFocusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417FE13D2888528500F23E2E /* Debug */,
+				417FE13E2888528500F23E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4195300B284FC5E100EDF104 /* Build configuration list for PBXProject "DailyFocus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
