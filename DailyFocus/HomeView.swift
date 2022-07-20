@@ -10,6 +10,7 @@ import CoreData
 
 struct HomeView: View {
 
+    // MARK: Properties
     static let tag: String? = "Home"
 
     var projectRows: [GridItem] {
@@ -24,6 +25,7 @@ struct HomeView: View {
 
     let items: FetchRequest<Item>
 
+    // Construct a fetch request to show the 10 highest-priority, incomplete items from open projects.
     init () {
 
         let completedPredicate = NSPredicate(format: "completed = false")
@@ -40,6 +42,7 @@ struct HomeView: View {
         items = FetchRequest(fetchRequest: request)
     }
 
+    // MARK: Body
     var body: some View {
         NavigationView {
             ScrollView {
@@ -71,6 +74,7 @@ struct HomeView: View {
     }
 }
 
+// MARK: Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
