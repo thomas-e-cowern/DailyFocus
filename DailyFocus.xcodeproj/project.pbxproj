@@ -20,6 +20,7 @@
 		417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FE1392888528500F23E2E /* DailyFocusTests.swift */; };
 		417FE141288861A900F23E2E /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FE140288861A900F23E2E /* AssetTests.swift */; };
 		417FE1432888643E00F23E2E /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FE1422888643E00F23E2E /* ProjectTests.swift */; };
+		417FE14528887E5400F23E2E /* AwardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FE14428887E5400F23E2E /* AwardsTests.swift */; };
 		4183B64A28808B32002A78A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64C28808B32002A78A2 /* Localizable.strings */; };
 		4183B64D28808C22002A78A2 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 4183B64F28808C22002A78A2 /* Localizable.stringsdict */; };
 		4183B65028809AEE002A78A2 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 4183B65228809AEE002A78A2 /* Awards.json */; };
@@ -65,6 +66,7 @@
 		417FE1392888528500F23E2E /* DailyFocusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusTests.swift; sourceTree = "<group>"; };
 		417FE140288861A900F23E2E /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		417FE1422888643E00F23E2E /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
+		417FE14428887E5400F23E2E /* AwardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTests.swift; sourceTree = "<group>"; };
 		4183B64B28808B32002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4183B64E28808C22002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		4183B65128809AEE002A78A2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				417FE1392888528500F23E2E /* DailyFocusTests.swift */,
 				417FE140288861A900F23E2E /* AssetTests.swift */,
 				417FE1422888643E00F23E2E /* ProjectTests.swift */,
+				417FE14428887E5400F23E2E /* AwardsTests.swift */,
 			);
 			path = DailyFocusTests;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417FE141288861A900F23E2E /* AssetTests.swift in Sources */,
+				417FE14528887E5400F23E2E /* AwardsTests.swift in Sources */,
 				417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */,
 				417FE1432888643E00F23E2E /* ProjectTests.swift in Sources */,
 			);
