@@ -14,7 +14,7 @@ class AssetTests: XCTestCase {
             XCTAssertNotNil(UIColor(named: color), "Failed to load color '\(color)' from asset catalog.")
         }
     }
-    
+
     func testJsonLoadsCorrectly() {
         XCTAssertTrue(Award.allAwards.isEmpty == false, "Failed to load awards from JSON.")
     }
