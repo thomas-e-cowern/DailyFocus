@@ -86,6 +86,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414308F92887DFFA002D11F6 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				41953015284FC5E100EDF104 /* ContentView.swift */,
+				414308FC2887E01A002D11F6 /* Awards */,
+				414308FB2887E012002D11F6 /* Projects */,
+				414308FA2887E00A002D11F6 /* Home */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		414308FA2887E00A002D11F6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				41A470EF2850EA4000062DA7 /* HomeView.swift */,
+				415F662C2885E5770029F1D4 /* ItemListView.swift */,
+				415F662E2885E9A60029F1D4 /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		414308FB2887E012002D11F6 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				419158AA2850F5AE006A77CE /* ProjectsView.swift */,
+				416E9304285CA98200188473 /* ProjectHeaderView.swift */,
+				416E9308285CB53500188473 /* EditProjectView.swift */,
+				419B2CF62876228F00E45522 /* SelectSomethingView.swift */,
+				4147C552285B5870001CE424 /* EditItemView.swift */,
+				4147C554285B62C0001CE424 /* ItemRowView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		414308FC2887E01A002D11F6 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				4183B65228809AEE002A78A2 /* Awards.json */,
+				419307DF28775B5500D172E7 /* Award.swift */,
+				419307E128775C4700D172E7 /* AwardsView.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		414308FD2887E0AF002D11F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */,
+				410983DE286CC94E00745B84 /* Sequence-Sorting.swift */,
+				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
+				4146F518287C621F007680E2 /* Color-Additions.swift */,
+				4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */,
+				4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		414308FE2887E0E5002D11F6 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				4183B64C28808B32002A78A2 /* Localizable.strings */,
+				4183B64F28808C22002A78A2 /* Localizable.stringsdict */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
 		41953007284FC5E000EDF104 = {
 			isa = PBXGroup;
 			children = (
@@ -106,35 +172,17 @@
 		41953012284FC5E100EDF104 /* DailyFocus */ = {
 			isa = PBXGroup;
 			children = (
-				4183B65228809AEE002A78A2 /* Awards.json */,
-				419307DF28775B5500D172E7 /* Award.swift */,
-				419307E128775C4700D172E7 /* AwardsView.swift */,
-				4146F518287C621F007680E2 /* Color-Additions.swift */,
+				414308FE2887E0E5002D11F6 /* Localizations */,
+				414308FD2887E0AF002D11F6 /* Extensions */,
+				414308F92887DFFA002D11F6 /* Activities */,
 				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
-				416E9308285CB53500188473 /* EditProjectView.swift */,
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
-				41953015284FC5E100EDF104 /* ContentView.swift */,
-				4147C552285B5870001CE424 /* EditItemView.swift */,
-				416E9304285CA98200188473 /* ProjectHeaderView.swift */,
-				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
-				41A470EF2850EA4000062DA7 /* HomeView.swift */,
-				415F662E2885E9A60029F1D4 /* ProjectSummaryView.swift */,
-				415F662C2885E5770029F1D4 /* ItemListView.swift */,
-				4183B64C28808B32002A78A2 /* Localizable.strings */,
-				4183B64F28808C22002A78A2 /* Localizable.stringsdict */,
-				419158AA2850F5AE006A77CE /* ProjectsView.swift */,
-				419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */,
-				419B2CF62876228F00E45522 /* SelectSomethingView.swift */,
-				4147C554285B62C0001CE424 /* ItemRowView.swift */,
-				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
+				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
 				416E9306285CAEEC00188473 /* Colors.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
-				4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */,
-				4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */,
-				410983DE286CC94E00745B84 /* Sequence-Sorting.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
