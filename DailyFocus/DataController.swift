@@ -21,7 +21,7 @@ class DataController: ObservableObject {
     init(inMemory: Bool = false) {
         print("Data Controller Init")
 
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -50,6 +50,19 @@ class DataController: ObservableObject {
 
         return dataController
 
+    }()
+
+    /// Ensures data model is only loaded once
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file.")
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file.")
+        }
+
+        return managedObjectModel
     }()
 
     // Creating sample data
