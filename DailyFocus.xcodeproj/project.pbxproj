@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410983DE286CC94E00745B84 /* Sequence-Sorting.swift */; };
+		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		4146F519287C6220007680E2 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146F518287C621F007680E2 /* Color-Additions.swift */; };
 		4147C553285B5870001CE424 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C552285B5870001CE424 /* EditItemView.swift */; };
 		4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C554285B62C0001CE424 /* ItemRowView.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		410983DE286CC94E00745B84 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
+		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		4146F518287C621F007680E2 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		4147C552285B5870001CE424 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4147C554285B62C0001CE424 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				417FE1422888643E00F23E2E /* ProjectTests.swift */,
 				417FE14428887E5400F23E2E /* AwardsTests.swift */,
 				4176490A288988E300A7613F /* DevelopmentTests.swift */,
+				41256DB7288AFC94003C379A /* ExtensionTests.swift */,
 			);
 			path = DailyFocusTests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				417FE141288861A900F23E2E /* AssetTests.swift in Sources */,
 				417FE14528887E5400F23E2E /* AwardsTests.swift in Sources */,
 				417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */,
+				41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */,
 				417FE1432888643E00F23E2E /* ProjectTests.swift in Sources */,
 				4176490B288988E300A7613F /* DevelopmentTests.swift in Sources */,
 			);
