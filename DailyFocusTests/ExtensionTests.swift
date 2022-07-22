@@ -10,9 +10,8 @@ import XCTest
 
 class ExtensionTests: XCTestCase {
 
-    func testSequenceKeyPathSortingSelf() {
-        let items = [1, 4, 5, 3, 2]
-        let sortedItems = items.sorted(by: \.self)
-        XCTAssertEqual(sortedItems, [1, 2, 3, 4, 5], "The sorted numbers must be ascending")
+    func testBundleDecodingAwards() {
+        let awards = Bundle.main.decode([Award].self, from: "Awards.json")
+        XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a non-empty array.")
     }
 }
