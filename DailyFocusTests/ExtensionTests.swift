@@ -22,4 +22,11 @@ class ExtensionTests: XCTestCase {
         let data = bundle.decode(String.self, from: "DecodableString.json")
         XCTAssertEqual(data, correctString, "The string must match the content of DecodableString.json.")
     }
+
+    func testDecodingDictionary() {
+        let bundle = Bundle(for: ExtensionTests.self)
+        let data = bundle.decode([String: Int].self, from: "DecodableDictionary.json")
+        XCTAssertEqual(data.count, 3, "There should be three items decoded from DecodableDictionary.json.")
+        XCTAssertEqual(data["One"], 1, "The dictionary should contain Int to String mappings.")
+    }
 }
