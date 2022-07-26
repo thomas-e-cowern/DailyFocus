@@ -185,6 +185,7 @@
 		417FE1382888528500F23E2E /* DailyFocusTests */ = {
 			isa = PBXGroup;
 			children = (
+				41C439A7288FF9AF00EE05B5 /* TestFixtures */,
 				417FE1392888528500F23E2E /* DailyFocusTests.swift */,
 				417FE140288861A900F23E2E /* AssetTests.swift */,
 				417FE1422888643E00F23E2E /* ProjectTests.swift */,
@@ -246,6 +247,13 @@
 				41953029284FE07100EDF104 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41C439A7288FF9AF00EE05B5 /* TestFixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestFixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
