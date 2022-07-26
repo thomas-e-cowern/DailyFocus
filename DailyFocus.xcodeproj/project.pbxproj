@@ -41,6 +41,7 @@
 		4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */; };
 		419B2CF72876229000E45522 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B2CF62876228F00E45522 /* SelectSomethingView.swift */; };
 		41A470F02850EA4000062DA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A470EF2850EA4000062DA7 /* HomeView.swift */; };
+		41C439A9288FFA0900EE05B5 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 41C439A8288FFA0900EE05B5 /* DecodableDictionary.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		419B2CF62876228F00E45522 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		41A470EF2850EA4000062DA7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		41C439A8288FFA0900EE05B5 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 		41C439A7288FF9AF00EE05B5 /* TestFixtures */ = {
 			isa = PBXGroup;
 			children = (
+				41C439A8288FFA0900EE05B5 /* DecodableDictionary.json */,
 			);
 			path = TestFixtures;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C439A9288FFA0900EE05B5 /* DecodableDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
