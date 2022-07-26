@@ -9,8 +9,8 @@ import XCTest
 @testable import DailyFocus
 
 class ExtensionTests: XCTestCase {
-    
-    let bundle = Bundle(for: ExtensionTests.self)
+
+    let correctString = "This string is to test if this project can load simple json"
 
     func testBundleDecodingAwards() {
         let awards = Bundle.main.decode([Award].self, from: "Awards.json")
@@ -20,6 +20,6 @@ class ExtensionTests: XCTestCase {
     func testDecodingString() {
         let bundle = Bundle(for: ExtensionTests.self)
         let data = bundle.decode(String.self, from: "DecodableString.json")
-        XCTAssertEqual(data, "The rain in Spain falls mainly on the Spaniards.", "The string must match the content of DecodableString.json.")
+        XCTAssertEqual(data, correctString, "The string must match the content of DecodableString.json.")
     }
 }
