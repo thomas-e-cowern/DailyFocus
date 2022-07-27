@@ -49,6 +49,16 @@
                ReferencedContainer = "container:DailyFocus.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "411027A32891DB7A0084B93F"
+               BuildableName = "DailyFocusUITests.xctest"
+               BlueprintName = "DailyFocusUITests"
+               ReferencedContainer = "container:DailyFocus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
