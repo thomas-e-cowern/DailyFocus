@@ -29,4 +29,12 @@ class ExtensionTests: XCTestCase {
         XCTAssertEqual(data.count, 3, "There should be three items decoded from DecodableDictionary.json.")
         XCTAssertEqual(data["One"], 1, "The dictionary should contain Int to String mappings.")
     }
+    
+    func testBindingOnChange() {
+        var onChangeFunctionRun = false
+        
+        func exampleFunctionToCall() {
+            onChangeFunctionRun = true
+        }
+    }
 }
