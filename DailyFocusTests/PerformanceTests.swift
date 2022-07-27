@@ -12,8 +12,14 @@ import CoreData
 class PerformanceTests: BaseTestCase {
 
     func testAwardCalculationPerformance() throws {
-        try dataController.createSampleData()
-        let awards = Award.allAwards
+        
+        // Create a large amount of test data
+        for _ in 1...100 {
+            try dataController.createSampleData()
+        }
+
+        // Simulate lots of awards to check
+        let awards = Array(repeating: Award.allAwards, count: 25).joined()
 
         measure {
             _ = awards.filter(dataController.hasEarned)
