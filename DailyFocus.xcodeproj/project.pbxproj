@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410983DE286CC94E00745B84 /* Sequence-Sorting.swift */; };
+		4110279F2891D1850084B93F /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110279E2891D1850084B93F /* PerformanceTests.swift */; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		4146F519287C6220007680E2 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146F518287C621F007680E2 /* Color-Additions.swift */; };
 		4147C553285B5870001CE424 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147C552285B5870001CE424 /* EditItemView.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		410983DE286CC94E00745B84 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
+		4110279E2891D1850084B93F /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		4146F518287C621F007680E2 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		4147C552285B5870001CE424 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				417FE14428887E5400F23E2E /* AwardsTests.swift */,
 				4176490A288988E300A7613F /* DevelopmentTests.swift */,
 				41256DB7288AFC94003C379A /* ExtensionTests.swift */,
+				4110279E2891D1850084B93F /* PerformanceTests.swift */,
 			);
 			path = DailyFocusTests;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4110279F2891D1850084B93F /* PerformanceTests.swift in Sources */,
 				417FE141288861A900F23E2E /* AssetTests.swift in Sources */,
 				417FE14528887E5400F23E2E /* AwardsTests.swift in Sources */,
 				417FE13A2888528500F23E2E /* DailyFocusTests.swift in Sources */,
