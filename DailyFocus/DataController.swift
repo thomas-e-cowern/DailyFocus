@@ -35,6 +35,12 @@ class DataController: ObservableObject {
                 print("Fatal Error")
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
+
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+                self.deleteAll()
+            }
+            #endif
         }
     }
 
