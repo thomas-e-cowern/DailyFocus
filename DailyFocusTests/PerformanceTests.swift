@@ -7,10 +7,17 @@
 
 import XCTest
 import CoreData
-import DailyFocus
+@testable import DailyFocus
 
 class PerformanceTests: BaseTestCase {
 
+    func testAwardCalculationPerformance() throws {
+        try dataController.createSampleData()
+        let awards = Award.allAwards
 
+        measure {
+            _ = awards.filter(dataController.hasEarned)
+        }
+    }
 
 }
