@@ -36,6 +36,7 @@ struct EditProjectView: View {
             // Section 1
             Section(header: Text("Basic Settings")) {
                 TextField("Project Name", text: $title.onChange(update))
+                    .accessibilityLabel("Project Name")
                 TextField("Description of this project", text: $detail.onChange(update))
             }
             // Section 2

@@ -77,9 +77,8 @@ class DailyFocusUITests: XCTestCase {
         app.buttons["Add Project"].tap()
         XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a project.")
 
-        app.
         app.buttons["EDIT PROJECT"].tap()
-        app.textFields["Project name"].tap()
+        app.textFields["Project Name"].tap()
 
         app.keys["space"].tap()
         app.keys["more"].tap()
