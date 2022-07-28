@@ -33,4 +33,19 @@ class DailyFocusUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertEqual(app.tabBars.buttons.count, 4, "There should be 4 tabs in the app")
     }
+    
+    func testOpenTabAddsProjects() {
+        
+        let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
+        app.launch()
+        
+        app.buttons["Open"].tap()
+        XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")
+
+        for tapCount in 1...5 {
+            app.buttons["add"].tap()
+            XCTAssertEqual(app.tables.cells.count, tapCount, "There should be \(tapCount) rows(s) in the list.")
+        }
+    }
 }
