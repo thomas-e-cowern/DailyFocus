@@ -26,6 +26,10 @@ class DailyFocusUITests: XCTestCase {
 
     func testAppHas4Tabs() throws {
 
+        let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
+        app.launch()
+
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertEqual(app.tabBars.buttons.count, 4, "There should be 4 tabs in the app")
     }
