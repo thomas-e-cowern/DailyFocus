@@ -7,22 +7,37 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 extension ProjectsView {
     class ViewModel: ObservableObject {
-        
+
+        @StateObject var viewModel: ViewModel
+
         @State private var sortOrder = Item.SortOrder.optimized
 
         let showClosedProjects: Bool
         let projects: FetchRequest<Project>
-        
+        let dataController: DataController
+
+        init(dataController: DataController, showClosedProjects: Bool) {
+
+            self.dataController = dataController
+            self.showClosedProjects = showClosedProjects
+
+            projects = FetchRequest<Project>(
+                entity: Project.entity(),
+                sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
+                predicate: NSPredicate(format: "closed = %d",
+                showClosedProjects)
+            )
+        }
+
         func addItem(to project: Project) {
-            withAnimation {
-                let item = Item(context: managedObjectContext)
-                item.project = project
-                item.creationDate = Date()
-                dataController.save()
-            }
+            let item = Item(context: dataController.container.viewContext)
+            item.project = project
+            item.creationDate = Date()
+            dataController.save()
         }
 
         func delete(_ offsets: IndexSet, from project: Project) {
@@ -37,12 +52,10 @@ extension ProjectsView {
         }
 
         func addProject () {
-            withAnimation {
-                let project = Project(context: managedObjectContext)
-                project.closed = false
-                project.creationDate = Date()
-                dataController.save()
-            }
+            let project = Project(context: dataController.container.viewContext)
+            project.closed = false
+            project.creationDate = Date()
+            dataController.save()
         }
     }
 }

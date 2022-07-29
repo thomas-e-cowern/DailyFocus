@@ -10,8 +10,6 @@ import SwiftUI
 struct ProjectsView: View {
 
     // MARK: Properties
-    @EnvironmentObject var dataController: DataController
-    @Environment(\.managedObjectContext) var managedObjectContext
 
     @State private var showingSortOrder = false
    
@@ -19,22 +17,6 @@ struct ProjectsView: View {
 
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-
-    
-
-    
-
-    // MARK: Initializer
-    init(showClosedProjects: Bool) {
-        self.showClosedProjects = showClosedProjects
-
-        projects = FetchRequest<Project>(
-            entity: Project.entity(),
-            sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
-            predicate: NSPredicate(format: "closed = %d",
-            showClosedProjects)
-        )
-    }
 
     // MARK: Computed properties
     var projectList: some View {
