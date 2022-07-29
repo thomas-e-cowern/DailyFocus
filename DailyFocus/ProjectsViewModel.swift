@@ -14,16 +14,17 @@ extension ProjectsView {
 
         @StateObject var viewModel: ViewModel
 
-        @State private var sortOrder = Item.SortOrder.optimized
+        @Published var sortOrder = Item.SortOrder.optimized
 
         let showClosedProjects: Bool
         let projects: FetchRequest<Project>
+
         let dataController: DataController
 
         init(dataController: DataController, showClosedProjects: Bool) {
 
-            self.dataController = dataController
             self.showClosedProjects = showClosedProjects
+            self.dataController = dataController
 
             projects = FetchRequest<Project>(
                 entity: Project.entity(),

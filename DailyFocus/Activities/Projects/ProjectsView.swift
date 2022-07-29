@@ -10,9 +10,8 @@ import SwiftUI
 struct ProjectsView: View {
 
     // MARK: Properties
-
     @State private var showingSortOrder = false
-   
+
     @State var sortDescriptor: NSSortDescriptor?
 
     static let openTag: String? = "Open"
@@ -21,9 +20,9 @@ struct ProjectsView: View {
     // MARK: Computed properties
     var projectList: some View {
         List {
-            ForEach(projects.wrappedValue) { project in
+            ForEach(viewModel.projects.wrappedValue) { project in
                 Section(header: ProjectHeaderView(project: project)) {
-                    ForEach(project.projectItems(using: sortOrder)) { item in
+                    ForEach(viewModel.project.projectItems(using: sortOrder)) { item in
                         ItemRowView(project: project, item: item)
                     }
                     .onDelete { offsets in
