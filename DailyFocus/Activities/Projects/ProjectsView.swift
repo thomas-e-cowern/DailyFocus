@@ -14,15 +14,15 @@ struct ProjectsView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
 
     @State private var showingSortOrder = false
-    @State private var sortOrder = Item.SortOrder.optimized
+   
     @State var sortDescriptor: NSSortDescriptor?
 
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
 
-    let showClosedProjects: Bool
+    
 
-    let projects: FetchRequest<Project>
+    
 
     // MARK: Initializer
     init(showClosedProjects: Bool) {
@@ -105,36 +105,6 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
-        }
-    }
-
-    // MARK: Methods
-    func addItem(to project: Project) {
-        withAnimation {
-            let item = Item(context: managedObjectContext)
-            item.project = project
-            item.creationDate = Date()
-            dataController.save()
-        }
-    }
-
-    func delete(_ offsets: IndexSet, from project: Project) {
-        let allItems = project.projectItems(using: sortOrder)
-
-        for offset in offsets {
-            let item = allItems[offset]
-            dataController.delete(item)
-        }
-
-        dataController.save()
-    }
-
-    func addProject () {
-        withAnimation {
-            let project = Project(context: managedObjectContext)
-            project.closed = false
-            project.creationDate = Date()
-            dataController.save()
         }
     }
 }
