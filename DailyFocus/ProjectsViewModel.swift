@@ -18,15 +18,21 @@ extension ProjectsView {
 
         var sortOrder = Item.SortOrder.optimized
         let showClosedProjects: Bool
-        let projects: FetchRequest<Project>
-
+        
+        private let projectsController: NSFetchedResultsController<Project>
+        @Published var projects = [Project]()
+        
         init(dataController: DataController, showClosedProjects: Bool) {
             self.dataController = dataController
             self.showClosedProjects = showClosedProjects
 
-            projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
-                NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
-            ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
+            let request: NSFetchRequest<Project> = Project.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)]
+            request.predicate = NSPredicate(format: "closed = %d", showClosedProjects)
+            
+//            projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
+//                NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
+//            ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
         }
 
         func addItem(to project: Project) {
