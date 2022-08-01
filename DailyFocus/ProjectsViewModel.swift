@@ -12,26 +12,21 @@ import SwiftUI
 extension ProjectsView {
     class ViewModel: ObservableObject {
 
-        @StateObject var viewModel: ViewModel
+        let dataController: DataController
 
-        @Published var sortOrder = Item.SortOrder.optimized
+//        @StateObject var viewModel: ViewModel
 
+        var sortOrder = Item.SortOrder.optimized
         let showClosedProjects: Bool
         let projects: FetchRequest<Project>
 
-        let dataController: DataController
-
         init(dataController: DataController, showClosedProjects: Bool) {
-
-            self.showClosedProjects = showClosedProjects
             self.dataController = dataController
+            self.showClosedProjects = showClosedProjects
 
-            projects = FetchRequest<Project>(
-                entity: Project.entity(),
-                sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
-                predicate: NSPredicate(format: "closed = %d",
-                showClosedProjects)
-            )
+            projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
+                NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
+            ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
         }
 
         func addItem(to project: Project) {

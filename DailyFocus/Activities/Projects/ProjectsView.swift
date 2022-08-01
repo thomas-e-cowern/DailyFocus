@@ -11,7 +11,7 @@ struct ProjectsView: View {
 
     // MARK: Properties
     @State private var showingSortOrder = false
-
+    @StateObject var viewModel: ViewModel
     @State var sortDescriptor: NSSortDescriptor?
 
     static let openTag: String? = "Open"
@@ -22,15 +22,15 @@ struct ProjectsView: View {
         List {
             ForEach(viewModel.projects.wrappedValue) { project in
                 Section(header: ProjectHeaderView(project: project)) {
-                    ForEach(viewModel.project.projectItems(using: sortOrder)) { item in
+                    ForEach(project.projectItems(using: viewModel.sortOrder)) { item in
                         ItemRowView(project: project, item: item)
                     }
                     .onDelete { offsets in
-                        delete(offsets, from: project)
+                        viewModel.delete(offsets, from: project)
                     }
-                    if showClosedProjects == false {
+                    if viewModel.showClosedProjects == false {
                         Button {
-                            addItem(to: project)
+                            viewModel.addItem(to: project)
                         } label: {
                             Label("Add New Item", systemImage: "plus")
                         }
@@ -43,9 +43,9 @@ struct ProjectsView: View {
 
     var addProjectToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
-            if showClosedProjects == false {
+            if viewModel.showClosedProjects == false {
                 Button {
-                    addProject()
+                    viewModel.addProject()
                 } label: {
                     Label("Add Project", systemImage: "plus")
                 }
@@ -67,23 +67,23 @@ struct ProjectsView: View {
     var body: some View {
         NavigationView {
             Group {
-                if projects.wrappedValue.isEmpty {
+                if viewModel.projects.wrappedValue.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
                 } else {
                     projectList
                 }
             }
-            .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .navigationBarTitle(viewModel.showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
                 addProjectToolbarItem
                 sortOrderToolbarItem
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
-                    .default(Text("Optimized")) { sortOrder = .optimized },
-                    .default(Text("Creation Date")) { sortOrder = .creationDate },
-                    .default(Text("Title")) { sortOrder = .title }
+                    .default(Text("Optimized")) { viewModel.sortOrder = .optimized },
+                    .default(Text("Creation Date")) { viewModel.sortOrder = .creationDate },
+                    .default(Text("Title")) { viewModel.sortOrder = .title }
                 ])
             }
         }
@@ -95,7 +95,7 @@ struct ProjectsView_Previews: PreviewProvider {
     static var dataController = DataController.preview
 
     static var previews: some View {
-        ProjectsView(showClosedProjects: false)
+        ProjectsView(viewModel: <#ProjectsView.ViewModel#>)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
             .previewInterfaceOrientation(.portraitUpsideDown)
