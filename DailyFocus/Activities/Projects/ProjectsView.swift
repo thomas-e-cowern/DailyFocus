@@ -20,7 +20,7 @@ struct ProjectsView: View {
     // MARK: Computed properties
     var projectList: some View {
         List {
-            ForEach(viewModel.projects.wrappedValue) { project in
+            ForEach(viewModel.projects) { project in
                 Section(header: ProjectHeaderView(project: project)) {
                     ForEach(project.projectItems(using: viewModel.sortOrder)) { item in
                         ItemRowView(project: project, item: item)
@@ -67,7 +67,7 @@ struct ProjectsView: View {
     var body: some View {
         NavigationView {
             Group {
-                if viewModel.projects.wrappedValue.isEmpty {
+                if viewModel.projects.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
                 } else {
