@@ -72,5 +72,11 @@ extension ProjectsView {
             project.creationDate = Date()
             dataController.save()
         }
+
+        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            if let newProjects = controller.fetchedObjects as? [Project] {
+                projects = newProjects
+            }
+        }
     }
 }
