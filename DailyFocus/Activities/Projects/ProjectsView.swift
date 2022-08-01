@@ -88,7 +88,7 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     init(dataController: DataController, showClosedProjects: Bool) {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)

@@ -89,7 +89,7 @@ class DailyFocusUITests: XCTestCase {
 
         XCTAssertTrue(app.buttons["NEW PROJECT 2"].exists, "The new project name should be visible in the list.")
     }
-    
+
     func testEditingItemUpdatesCorrectly() {
 
         let app = XCUIApplication()
