@@ -30,7 +30,9 @@ struct ProjectsView: View {
                     }
                     if viewModel.showClosedProjects == false {
                         Button {
-                            viewModel.addItem(to: project)
+                            withAnimation {
+                                viewModel.addItem(to: project)
+                            }
                         } label: {
                             Label("Add New Item", systemImage: "plus")
                         }
@@ -45,7 +47,9 @@ struct ProjectsView: View {
         ToolbarItem(placement: .navigationBarTrailing) {
             if viewModel.showClosedProjects == false {
                 Button {
-                    viewModel.addProject()
+                    withAnimation {
+                        viewModel.addProject()
+                    }
                 } label: {
                     Label("Add Project", systemImage: "plus")
                 }
