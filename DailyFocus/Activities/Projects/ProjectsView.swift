@@ -97,12 +97,9 @@ struct ProjectsView: View {
 
 // MARK: Preview
 struct ProjectsView_Previews: PreviewProvider {
-    static var dataController = DataController.preview
 
     static var previews: some View {
-        ProjectsView(viewModel: <#ProjectsView.ViewModel#>)
-            .environment(\.managedObjectContext, dataController.container.viewContext)
-            .environmentObject(dataController)
+        ProjectsView(dataController: DataController.preview, showClosedProjects: false)
             .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
