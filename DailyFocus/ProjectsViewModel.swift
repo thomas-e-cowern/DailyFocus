@@ -30,9 +30,12 @@ extension ProjectsView {
             request.sortDescriptors = [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)]
             request.predicate = NSPredicate(format: "closed = %d", showClosedProjects)
             
-//            projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
-//                NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
-//            ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
+            projectsController = NSFetchedResultsController(
+                fetchRequest: request,
+                managedObjectContext: dataController.container.viewContext,
+                sectionNameKeyPath: nil,
+                cacheName: nil
+            )
         }
 
         func addItem(to project: Project) {
