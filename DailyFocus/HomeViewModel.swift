@@ -17,11 +17,11 @@ extension HomeView {
         @Published var items = [Item]()
 
         var dataController: DataController
-        
+
         var upNext: ArraySlice<Item> {
             items.prefix(3)
         }
-        
+
         var moreToExplore: ArraySlice<Item> {
             items.dropFirst(3)
         }
@@ -43,7 +43,7 @@ extension HomeView {
 
             // Construct a fetch request to show 10 highest priority items if still open
             let itemRequest: NSFetchRequest<Item> = Item.fetchRequest()
-            let completedPredicate = NSPredicate(format: "closed = false")
+            let completedPredicate = NSPredicate(format: "completed = false")
             let openPredicate = NSPredicate(format: "project.closed = false")
             let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
             itemRequest.predicate = compoundPredicate
@@ -51,7 +51,7 @@ extension HomeView {
             itemRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
 
             itemRequest.fetchLimit = 10
-            
+
             itemsController = NSFetchedResultsController(
                 fetchRequest: itemRequest,
                 managedObjectContext: dataController.container.viewContext,
@@ -74,7 +74,7 @@ extension HomeView {
                 print("There was a problem with fetching in Home View Model")
             }
         }
-        
+
         func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
             if let newItems = controller.fetchedObjects as? [Item] {
                 items = newItems
@@ -82,7 +82,7 @@ extension HomeView {
                 projects = newProjects
             }
         }
-        
+
         func addSampleData() {
             dataController.deleteAll()
             try? dataController.createSampleData()
