@@ -31,22 +31,21 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHGrid(rows: projectRows) {
-                            ForEach(projects, content: ProjectSummaryView.init)
+                            ForEach(viewModel.projects, content: ProjectSummaryView.init)
                         } // End of LazyHGrid
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
                     }
 
                     VStack(alignment: .leading) {
-                        ItemListView(title: "Up Next", items: items.wrappedValue.prefix(3))
-                        ItemListView(title: "More To Explore", items: items.wrappedValue.dropFirst(3))
+                        ItemListView(title: "Up Next", items: viewModel.upNext)
+                        ItemListView(title: "More To Explore", items:  viewModel.moreToExplore)
                     }
                     .padding()
                 } // End of VStack
                 .toolbar {
                     Button("Add Data") {
-                        dataController.deleteAll()
-                        try? dataController.createSampleData()
+                        viewModel.addSampleData()
                     }
                 }
             } // End of Scrollview
