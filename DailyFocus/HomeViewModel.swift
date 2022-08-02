@@ -17,6 +17,14 @@ extension HomeView {
         @Published var items = [Item]()
 
         var dataController: DataController
+        
+        var upNext: ArraySlice<Item> {
+            items.prefix(3)
+        }
+        
+        var moreToExplore: ArraySlice<Item> {
+            items.dropFirst(3)
+        }
 
         init(dataController: DataController) {
             self.dataController = dataController
@@ -73,6 +81,11 @@ extension HomeView {
             } else if let newProjects = controller.fetchedObjects as? [Project] {
                 projects = newProjects
             }
+        }
+        
+        func addSampleData() {
+            dataController.deleteAll()
+            try? dataController.createSampleData()
         }
     }
 }
