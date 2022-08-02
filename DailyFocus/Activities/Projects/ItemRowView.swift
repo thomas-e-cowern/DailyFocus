@@ -20,9 +20,10 @@ struct ItemRowView: View {
             Label {
                 Text(item.itemTitle)
             } icon: {
-                icon
+                Image(systemName: viewModel.icon)
+                    .foregroundColor(viewModel.color.map { Color($0) } ?? .clear)
             }
-            .accessibilityLabel(label)
+            .accessibilityLabel(viewModel.label)
         }
     }
     
