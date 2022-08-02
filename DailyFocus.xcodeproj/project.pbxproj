@@ -222,6 +222,16 @@
 			path = Localizations;
 			sourceTree = "<group>";
 		};
+		41449FDD2899958500DD6C3E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				41449FD9289956ED00DD6C3E /* HomeViewModel.swift */,
+				410571BD2894587B0071E3E4 /* ProjectsViewModel.swift */,
+				41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		417FE1382888528500F23E2E /* DailyFocusTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,17 +274,15 @@
 				414308FE2887E0E5002D11F6 /* Localizations */,
 				414308FD2887E0AF002D11F6 /* Extensions */,
 				414308F92887DFFA002D11F6 /* Activities */,
+				41449FDD2899958500DD6C3E /* ViewModels */,
 				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
-				410571BD2894587B0071E3E4 /* ProjectsViewModel.swift */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
 				416E9306285CAEEC00188473 /* Colors.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
-				41449FD9289956ED00DD6C3E /* HomeViewModel.swift */,
-				41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
