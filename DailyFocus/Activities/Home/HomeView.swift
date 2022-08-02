@@ -12,34 +12,16 @@ struct HomeView: View {
 
     // MARK: Properties
     static let tag: String? = "Home"
+    @StateObject var viewModel: ViewModel
 
     var projectRows: [GridItem] {
         [GridItem(.fixed(100))]
     }
 
-    @EnvironmentObject var dataController: DataController
-    @FetchRequest(
-        entity: Project.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
-        predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
-
-    let items: FetchRequest<Item>
-
     // Construct a fetch request to show the 10 highest-priority, incomplete items from open projects.
-    init () {
-
-        let completedPredicate = NSPredicate(format: "completed = false")
-        let openPredicate = NSPredicate(format: "project.closed = false")
-        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
-
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-        request.predicate = compoundPredicate
-
-        request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
-
-        request.fetchLimit = 10
-
-        items = FetchRequest(fetchRequest: request)
+    init (dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     // MARK: Body
@@ -77,7 +59,7 @@ struct HomeView: View {
 // MARK: Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(dataController: .preview)
             .previewInterfaceOrientation(.portrait)
     }
 }
