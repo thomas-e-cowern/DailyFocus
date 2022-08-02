@@ -11,28 +11,35 @@ extension ItemRowView {
     class ViewModel: ObservableObject {
 
         let project: Project
-        let ite: Item
+        let item: Item
         
-        var icon: some View {
+        var icon: String {
             if item.completed {
-                return Image(systemName: "checkmark.circle")
-                    .foregroundColor(Color(project.projectColor))
+                return "checkmark.circle"
             } else if item.priority == 3 {
-                return Image(systemName: "exclamationmark.triangle")
-                    .foregroundColor(Color(project.projectColor))
+                return "exclamationmark.triangle"
             } else {
-                return Image(systemName: "checkmark.circle")
-                    .foregroundColor(.clear)
+                return "checkmark.circle"
+            }
+        }
+        
+        var color: String? {
+            if item.completed {
+                return project.projectColor
+            } else if item.priority == 3 {
+                return project.projectColor
+            } else {
+                return nil
             }
         }
 
-        var label: Text {
+        var label: String {
             if item.completed {
-                return Text("\(item.itemTitle), completed")
+                return "\(item.itemTitle), completed"
             } else if item.priority == 3 {
-                return Text("\(item.itemTitle), high priority")
+                return "\(item.itemTitle), high priority"
             } else {
-                return Text(item.itemTitle)
+                return item.itemTitle
             }
         }
 
