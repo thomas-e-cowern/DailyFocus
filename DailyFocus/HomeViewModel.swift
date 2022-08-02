@@ -50,6 +50,29 @@ extension HomeView {
                 sectionNameKeyPath: nil,
                 cacheName: nil
             )
+
+            super.init()
+
+            projectsController.delegate = self
+            itemsController.delegate = self
+
+            do {
+                try projectsController.performFetch()
+                try itemsController.performFetch()
+
+                projects = projectsController.fetchedObjects ?? []
+                items = itemsController.fetchedObjects ?? []
+            } catch {
+                print("There was a problem with fetching in Home View Model")
+            }
+        }
+        
+        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            if let newItems = controller.fetchedObjects as? [Item] {
+                items = newItems
+            } else if let newProjects = controller.fetchedObjects as? [Project] {
+                projects = newProjects
+            }
         }
     }
 }
