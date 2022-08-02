@@ -39,7 +39,7 @@ struct HomeView: View {
 
                     VStack(alignment: .leading) {
                         ItemListView(title: "Up Next", items: viewModel.upNext)
-                        ItemListView(title: "More To Explore", items:  viewModel.moreToExplore)
+                        ItemListView(title: "More To Explore", items: viewModel.moreToExplore)
                     }
                     .padding()
                 } // End of VStack
