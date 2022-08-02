@@ -12,11 +12,11 @@ extension ItemRowView {
 
         let project: Project
         let item: Item
-        
+
         var title: String {
             item.itemTitle
         }
-        
+
         var icon: String {
             if item.completed {
                 return "checkmark.circle"
@@ -26,7 +26,7 @@ extension ItemRowView {
                 return "checkmark.circle"
             }
         }
-        
+
         var color: String? {
             if item.completed {
                 return project.projectColor
