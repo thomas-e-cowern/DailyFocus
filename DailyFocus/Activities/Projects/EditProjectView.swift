@@ -51,7 +51,10 @@ struct EditProjectView: View {
             Section(header: Text("Closing a project moves it from the Open to Closed tab; deleting if removes the project completely")) {
                 Button(project.closed ? "Reopen this project" : "Close this project") {
                     project.closed.toggle()
-                    update()
+
+                    if project.closed {
+                        UINotificationFeedbackGenerator().notificationOccurred(.success)
+                    }
                 }
 
                 Button("Delete this project") {
