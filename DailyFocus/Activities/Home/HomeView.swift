@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import CoreSpotlight
 
 struct HomeView: View {
 
@@ -51,6 +52,13 @@ struct HomeView: View {
             } // End of Scrollview
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+        }
+    }
+    
+    func loadSpotlightItem(_ userActivity: NSUserActivity) {
+        if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as?
+            String {
+            viewModel.selectItem(with: uniqueIdentifier)
         }
     }
 }
