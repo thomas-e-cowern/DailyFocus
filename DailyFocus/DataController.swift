@@ -151,11 +151,17 @@ class DataController: ObservableObject {
     func update(_ item: Item) {
         let itemId = item.objectID.uriRepresentation().absoluteString
         let projectId = item.project?.objectID.uriRepresentation().absoluteString
-        
+
         let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
         attributeSet.title = item.itemTitle
         attributeSet.contentDescription = item.itemDetail
-        
-        
+
+        let searchableItem = CSSearchableItem(
+            uniqueIdentifier: itemId,
+            domainIdentifier: projectId,
+            attributeSet: attributeSet
+        )
+
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
     }
 }
