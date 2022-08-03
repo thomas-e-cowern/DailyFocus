@@ -76,6 +76,10 @@ struct EditProjectView: View {
     }
 
     // MARK: Methods
+    func toggleClosed() {
+        
+    }
+    
     func update () {
         project.title = title
         project.detail = detail
