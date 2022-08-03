@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import CoreSpotlight
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards, and dealing with sample data.
@@ -145,5 +146,16 @@ class DataController: ObservableObject {
             // an unknown award criterion; this should never be allowed
             return false
         }
+    }
+
+    func update(_ item: Item) {
+        let itemId = item.objectID.uriRepresentation().absoluteString
+        let projectId = item.project?.objectID.uriRepresentation().absoluteString
+        
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.itemTitle
+        attributeSet.contentDescription = item.itemDetail
+        
+        
     }
 }
