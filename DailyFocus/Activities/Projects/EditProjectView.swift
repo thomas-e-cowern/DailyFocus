@@ -109,11 +109,11 @@ struct EditProjectView: View {
                 let pattern = try CHHapticPattern(events: [event1, event2], parameterCurves: [parameter])
 
                 let player = try engine?.makePlayer(with: pattern)
-                try player?.stop(atTime: 0)
+                try player?.start(atTime: 0)
 
             } catch {
                 // Haptics didn't work
-                print("Haptics failed to work")
+                print("🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬 Haptics failed to work")
             }
         }
     }
