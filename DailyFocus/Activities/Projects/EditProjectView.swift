@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct EditProjectView: View {
 
@@ -18,6 +19,7 @@ struct EditProjectView: View {
     @State private var title: String
     @State private var detail: String
     @State private var color: String
+    @State private var engine = try? CHHapticEngine()
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -76,7 +78,21 @@ struct EditProjectView: View {
         project.closed.toggle()
 
         if project.closed {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            // Custom haptic effects
+            do {
+                try engine?.start()
+
+                let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0)
+                let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+
+                let start = CHHapticParameterCurve.ControlPoint(relativeTime: 0, value: 1)
+                let end = CHHapticParameterCurve.ControlPoint(relativeTime: 1, value: 0)
+
+                let parameter = CHHapticParameterCurve(parameterID: .hapticIntensityControl, controlPoints: [start, end], relativeTime: 0)
+            } catch {
+                // Haptics didn't work
+                print("Haptics failed to work")
+            }
         }
     }
 
