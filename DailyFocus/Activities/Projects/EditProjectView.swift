@@ -65,7 +65,13 @@ struct EditProjectView: View {
                     update()
                 })
                 .alert(isPresented: $showingNotificationsError) {
-                    Alert(title: Text("Uh oh..."), message: Text("There was a problem setting a reminder.  Please check you have notification enabled"), primaryButton: .default(Text("Check settings"), action: showAppSettings), secondaryButton: .cancel())
+                    Alert(
+                        title: Text("Uh oh..."),
+                        message: Text("There was a problem, please check you have notification enabled"),
+                        primaryButton: .default(Text("Check settings"),
+                                                action: showAppSettings),
+                        secondaryButton: .cancel()
+                    )
                 }
 
                 if remindMe {
@@ -154,8 +160,18 @@ struct EditProjectView: View {
 
         if remindMe {
             project.reminderTime = reminderTime
+
+            dataController.addReminders(for: project) { success in
+                if success == false {
+                    project.reminderTime = nil
+                    remindMe = false
+
+                    showingNotificationsError = true
+                }
+            }
         } else {
             project.reminderTime = nil
+            dataController.removeReminders(for: project)
         }
     }
 
