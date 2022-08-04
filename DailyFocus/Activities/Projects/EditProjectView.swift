@@ -147,6 +147,12 @@ struct EditProjectView: View {
         project.title = title
         project.detail = detail
         project .color = color
+
+        if remindMe {
+            project.reminderTime = reminderTime
+        } else {
+            project.reminderTime = nil
+        }
     }
 
     func delete () {
