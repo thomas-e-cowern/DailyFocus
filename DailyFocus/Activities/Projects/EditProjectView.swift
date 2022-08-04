@@ -19,6 +19,8 @@ struct EditProjectView: View {
     @State private var title: String
     @State private var detail: String
     @State private var color: String
+    @State private var remindMe: Bool
+    @State private var reminderTime: Date
     @State private var engine = try? CHHapticEngine()
 
     let colorColumns = [
@@ -31,6 +33,14 @@ struct EditProjectView: View {
         _title = State(wrappedValue: project.projectTitle)
         _detail = State(wrappedValue: project.projectDetails)
         _color = State(wrappedValue: project.projectColor)
+
+        if let projectReminderTime = project.reminderTime {
+            _reminderTime = State(wrappedValue: projectReminderTime)
+            _remindMe = State(wrappedValue: true)
+        } else {
+            _reminderTime = State(wrappedValue: Date())
+            _remindMe = State(wrappedValue: false)
+        }
     }
 
     var body: some View {
