@@ -22,6 +22,7 @@ struct EditProjectView: View {
     @State private var remindMe: Bool
     @State private var reminderTime: Date
     @State private var engine = try? CHHapticEngine()
+    @State private var showingNotificationsError = false
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -63,6 +64,9 @@ struct EditProjectView: View {
                 Toggle("Show Reminders", isOn: $remindMe.animation().onChange {
                     update()
                 })
+                .alert(isPresented: $showingNotificationsError) {
+                    Alert(title: Text("Uh oh..."), message: Text("There was a problem setting a reminder.  Please check you have notification enabled"), primaryButton: .default(Text("Check settings"), action: showAppSettings), secondaryButton: .cancel())
+                }
 
                 if remindMe {
                     DatePicker(
@@ -182,6 +186,17 @@ struct EditProjectView: View {
             item == color ? [.isButton, .isSelected] : .isButton
         )
         .accessibilityLabel(LocalizedStringKey(item))
+    }
+
+    // Show failure to set notification and link to app settings
+    func showAppSettings() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl)
+        }
     }
 }
 
