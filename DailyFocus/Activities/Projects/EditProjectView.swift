@@ -58,6 +58,21 @@ struct EditProjectView: View {
                 }
                 .padding(.vertical)
             }
+
+            Section(header: Text("Project Reminders")) {
+                Toggle("Show Reminders", isOn: $remindMe.animation().onChange {
+                    update()
+                })
+
+                if remindMe {
+                    DatePicker(
+                        "Reminder Time",
+                        selection: $reminderTime.onChange(update),
+                        displayedComponents: .hourAndMinute
+                    )
+                }
+            }
+
             // Section 3
             // swiftlint:disable:next line_length
             Section(header: Text("Closing a project moves it from the Open to Closed tab; deleting if removes the project completely")) {

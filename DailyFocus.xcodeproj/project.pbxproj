@@ -250,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
-				41953027284FE05200EDF104 /* Info.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -279,6 +278,7 @@
 		41953012284FC5E100EDF104 /* DailyFocus */ = {
 			isa = PBXGroup;
 			children = (
+				41953027284FE05200EDF104 /* Info.plist */,
 				4180058D289C3C1C00F7DFDD /* Configuration */,
 				414308FE2887E0E5002D11F6 /* Localizations */,
 				414308FD2887E0AF002D11F6 /* Extensions */,
