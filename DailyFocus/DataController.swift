@@ -8,6 +8,7 @@
 import CoreData
 import SwiftUI
 import CoreSpotlight
+import UserNotifications
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards, and dealing with sample data.
@@ -193,6 +194,11 @@ class DataController: ObservableObject {
     }
 
     private func requestNotifications(completion: @escaping (Bool) -> Void) {
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+            completion(granted)
+        }
     }
 
     private func placeReminders(for project: Project, completion: @escaping (Bool) -> Void) {
