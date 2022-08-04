@@ -111,7 +111,7 @@
 		41953022284FCFB600EDF104 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		41953024284FD43F00EDF104 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		41953026284FE04100EDF104 /* DailyFocus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyFocus.entitlements; sourceTree = "<group>"; };
-		41953027284FE05200EDF104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		41953027284FE05200EDF104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41953029284FE07100EDF104 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		4198FDDB2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
@@ -159,7 +159,6 @@
 		414308F92887DFFA002D11F6 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				41953015284FC5E100EDF104 /* ContentView.swift */,
 				414308FC2887E01A002D11F6 /* Awards */,
 				414308FB2887E012002D11F6 /* Projects */,
 				414308FA2887E00A002D11F6 /* Home */,
@@ -247,6 +246,15 @@
 			path = DailyFocusTests;
 			sourceTree = "<group>";
 		};
+		4180058D289C3C1C00F7DFDD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
+				41953027284FE05200EDF104 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		41953007284FC5E000EDF104 = {
 			isa = PBXGroup;
 			children = (
@@ -271,15 +279,15 @@
 		41953012284FC5E100EDF104 /* DailyFocus */ = {
 			isa = PBXGroup;
 			children = (
+				4180058D289C3C1C00F7DFDD /* Configuration */,
 				414308FE2887E0E5002D11F6 /* Localizations */,
 				414308FD2887E0AF002D11F6 /* Extensions */,
 				414308F92887DFFA002D11F6 /* Activities */,
 				41449FDD2899958500DD6C3E /* ViewModels */,
-				41953027284FE05200EDF104 /* Info.plist */,
 				41953026284FE04100EDF104 /* DailyFocus.entitlements */,
 				41953013284FC5E100EDF104 /* DailyFocusApp.swift */,
+				41953015284FC5E100EDF104 /* ContentView.swift */,
 				41953024284FD43F00EDF104 /* DataController.swift */,
-				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
 				416E9306285CAEEC00188473 /* Colors.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
