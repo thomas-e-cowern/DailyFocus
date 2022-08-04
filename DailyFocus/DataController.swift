@@ -191,11 +191,14 @@ class DataController: ObservableObject {
     }
 
     func removeReminders(for project: Project) {
+        let center = UNUserNotificationCenter.current()
+        let id = project.objectID.uriRepresentation().absoluteString
+        center.removePendingNotificationRequests(withIdentifiers: [id])
     }
 
     private func requestNotifications(completion: @escaping (Bool) -> Void) {
         let center = UNUserNotificationCenter.current()
-        
+
         center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
             completion(granted)
         }
