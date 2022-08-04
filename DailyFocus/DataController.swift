@@ -184,4 +184,17 @@ class DataController: ObservableObject {
 
         return try? container.viewContext.existingObject(with: id) as? Item
     }
+
+    // Notifications methods
+    func addReminders(for project: Project, completion: @escaping (Bool) -> Void) {
+    }
+
+    func removeReminders(for project: Project) {
+    }
+
+    private func requestNotifications(completion: @escaping (Bool) -> Void) {
+    }
+
+    private func placeReminders(for project: Project, completion: @escaping (Bool) -> Void) {
+    }
 }
