@@ -205,5 +205,28 @@ class DataController: ObservableObject {
     }
 
     private func placeReminders(for project: Project, completion: @escaping (Bool) -> Void) {
+        let content = UNMutableNotificationContent()
+        content.sound = .default
+        content.title = project.projectTitle
+
+        if let projectDetail = project.detail {
+            content.subtitle = projectDetail
+        }
+
+        let components = Calendar.current.dateComponents([.hour, .minute], from: project.reminderTime ?? Date())
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+        
+        let id = project.objectID.uriRepresentation().absoluteString
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            DispatchQueue.main.async {
+                if error == nil {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            }
+        }
     }
 }
