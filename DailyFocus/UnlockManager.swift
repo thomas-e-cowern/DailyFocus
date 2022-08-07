@@ -9,7 +9,9 @@ import Foundation
 import Combine
 import StoreKit
 
-class UnlockManager: NSObject, ObservableObject {
+class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, SKProductsRequestDelegate {
+    
+    
     enum RequestState {
         case loading
         case loaded
@@ -19,4 +21,12 @@ class UnlockManager: NSObject, ObservableObject {
     }
     
     @Published var requestState = RequestState.loading
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        // More to come
+    }
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        // More to come
+    }
 }
