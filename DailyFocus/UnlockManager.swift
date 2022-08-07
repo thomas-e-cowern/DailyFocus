@@ -20,7 +20,32 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
     }
 
     @Published var requestState = RequestState.loading
-    
+
+    private let dataController: DataController
+    private let request: SKProductsRequest
+    private var loadedProducts = [SKProduct]()
+
+    init(dataController: DataController) {
+        // Store the data controller
+        self.dataController = dataController
+
+        // Prepare to look for the unlock product
+        let productIds = Set(["com.mobilesoftwareservices.DailyFocus.unlock"])
+        request = SKProductsRequest(productIdentifiers: productIds)
+
+        // NSobject requirement
+        super.init()
+
+        // Start the payment queue
+        SKPaymentQueue.default().add(self)
+
+        // Set up ntofications when product request completes
+        request.delegate = self
+
+        // Start the request
+        request.start()
+    }
+
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         // More to come
     }
