@@ -45,6 +45,11 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
         // Start the request
         request.start()
     }
+    
+    // Deinitialize payment queue
+    deinit {
+        SKPaymentQueue.default().remove(self)
+    }
 
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         // More to come

@@ -11,11 +11,15 @@ import SwiftUI
 struct DailyFocusApp: App {
 
     @StateObject var dataController: DataController
+    @StateObject var unlockManager: UnlockManager
 
     init() {
         print("Inside App Init")
         let dataController = DataController()
+        let unlockManager = UnlockManager(dataController: dataController)
+
         _dataController = StateObject(wrappedValue: dataController)
+        _unlockManager = StateObject(wrappedValue: unlockManager)
     }
 
     var body: some Scene {
