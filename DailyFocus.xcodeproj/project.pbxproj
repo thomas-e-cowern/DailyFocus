@@ -16,6 +16,7 @@
 		41108B6F28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */; };
 		41108B7128A185C20090C5A5 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7028A185C10090C5A5 /* PurchaseButton.swift */; };
 		41108B7528A190CD0090C5A5 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7428A190CD0090C5A5 /* ProductView.swift */; };
+		41108B7728A192950090C5A5 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7628A192950090C5A5 /* UnlockView.swift */; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FD9289956ED00DD6C3E /* HomeViewModel.swift */; };
 		41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */; };
@@ -84,6 +85,7 @@
 		41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
 		41108B7028A185C10090C5A5 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		41108B7428A190CD0090C5A5 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		41108B7628A192950090C5A5 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		41449FD9289956ED00DD6C3E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */,
 				41108B7028A185C10090C5A5 /* PurchaseButton.swift */,
 				41108B7428A190CD0090C5A5 /* ProductView.swift */,
+				41108B7628A192950090C5A5 /* UnlockView.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				419B2CF72876229000E45522 /* SelectSomethingView.swift in Sources */,
 				419307E028775B5500D172E7 /* Award.swift in Sources */,
 				4147C555285B62C0001CE424 /* ItemRowView.swift in Sources */,
+				41108B7728A192950090C5A5 /* UnlockView.swift in Sources */,
 				41953016284FC5E100EDF104 /* ContentView.swift in Sources */,
 				4147C557285B6901001CE424 /* Binding-OnChange.swift in Sources */,
 				410983DF286CC94E00745B84 /* Sequence-Sorting.swift in Sources */,
