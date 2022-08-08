@@ -13,10 +13,14 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
 
     enum RequestState {
         case loading
-        case loaded
-        case failed
+        case loaded(SKProduct)
+        case failed(Error?)
         case purchased
         case deferred
+    }
+    
+    private enum StoreError: Error {
+        case invalidIdentifiers, missingProduct
     }
 
     @Published var requestState = RequestState.loading
@@ -45,7 +49,7 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
         // Start the request
         request.start()
     }
-    
+
     // Deinitialize payment queue
     deinit {
         SKPaymentQueue.default().remove(self)
