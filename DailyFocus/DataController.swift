@@ -9,6 +9,7 @@ import CoreData
 import SwiftUI
 import CoreSpotlight
 import UserNotifications
+import StoreKit
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards, and dealing with sample data.
@@ -265,6 +266,16 @@ class DataController: ObservableObject {
 
         set {
             defaults.set(newValue, forKey: "fullVersionUnlocked")
+        }
+    }
+
+    // Sets up app to call for a review
+    func appLaunched() {
+        let allScenes = UIApplication.shared.connectedScenes
+        let scene = allScenes.first { $0.activationState == .foregroundActive }
+
+        if let windowScene = scene as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }
