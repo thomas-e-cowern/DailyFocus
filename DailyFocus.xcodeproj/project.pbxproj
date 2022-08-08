@@ -167,9 +167,21 @@
 			path = DailyFocusUITests;
 			sourceTree = "<group>";
 		};
+		41108B7828A196EC0090C5A5 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				41108B6B28A042510090C5A5 /* UnlockManager.swift */,
+				41108B7028A185C10090C5A5 /* PurchaseButton.swift */,
+				41108B7428A190CD0090C5A5 /* ProductView.swift */,
+				41108B7628A192950090C5A5 /* UnlockView.swift */,
+			);
+			path = Unlock;
+			sourceTree = "<group>";
+		};
 		414308F92887DFFA002D11F6 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				41108B7828A196EC0090C5A5 /* Unlock */,
 				414308FC2887E01A002D11F6 /* Awards */,
 				414308FB2887E012002D11F6 /* Projects */,
 				414308FA2887E00A002D11F6 /* Home */,
@@ -213,6 +225,7 @@
 		414308FD2887E0AF002D11F6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */,
 				419307DB2877424500D172E7 /* Bundle-Decodable.swfit.swift */,
 				410983DE286CC94E00745B84 /* Sequence-Sorting.swift */,
 				4147C556285B6901001CE424 /* Binding-OnChange.swift */,
@@ -260,6 +273,7 @@
 		4180058D289C3C1C00F7DFDD /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				41108B6D28A0443C0090C5A5 /* Configuration.storekit */,
 				41953021284FCFB500EDF104 /* Main.xcdatamodeld */,
 			);
 			path = Configuration;
@@ -302,12 +316,6 @@
 				41953017284FC5EB00EDF104 /* Assets.xcassets */,
 				416E9306285CAEEC00188473 /* Colors.xcassets */,
 				41953019284FC5EB00EDF104 /* Preview Content */,
-				41108B6B28A042510090C5A5 /* UnlockManager.swift */,
-				41108B6D28A0443C0090C5A5 /* Configuration.storekit */,
-				41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */,
-				41108B7028A185C10090C5A5 /* PurchaseButton.swift */,
-				41108B7428A190CD0090C5A5 /* ProductView.swift */,
-				41108B7628A192950090C5A5 /* UnlockView.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
