@@ -271,6 +271,10 @@ class DataController: ObservableObject {
 
     // Sets up app to call for a review
     func appLaunched() {
+        // 5 projects and they get asked for a review
+        guard count(for: Project.fetchRequest()) >= 5 else {
+            return
+        }
         let allScenes = UIApplication.shared.connectedScenes
         let scene = allScenes.first { $0.activationState == .foregroundActive }
 

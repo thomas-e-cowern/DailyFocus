@@ -36,6 +36,8 @@ struct DailyFocusApp: App {
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
                     perform: save
                 )
+                // Setting up to ask user for review
+                .onAppear(perform: dataController.appLaunched)
         }
     }
 
