@@ -15,6 +15,7 @@
 		41108B6C28A042510090C5A5 /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B6B28A042510090C5A5 /* UnlockManager.swift */; };
 		41108B6F28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */; };
 		41108B7128A185C20090C5A5 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7028A185C10090C5A5 /* PurchaseButton.swift */; };
+		41108B7328A186720090C5A5 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7228A186720090C5A5 /* ProductView.swift */; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FD9289956ED00DD6C3E /* HomeViewModel.swift */; };
 		41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */; };
@@ -82,6 +83,7 @@
 		41108B6D28A0443C0090C5A5 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
 		41108B7028A185C10090C5A5 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		41108B7228A186720090C5A5 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		41449FD9289956ED00DD6C3E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				41108B6D28A0443C0090C5A5 /* Configuration.storekit */,
 				41108B6E28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift */,
 				41108B7028A185C10090C5A5 /* PurchaseButton.swift */,
+				41108B7228A186720090C5A5 /* ProductView.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				415F662F2885E9A60029F1D4 /* ProjectSummaryView.swift in Sources */,
 				41108B7128A185C20090C5A5 /* PurchaseButton.swift in Sources */,
 				416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */,
+				41108B7328A186720090C5A5 /* ProductView.swift in Sources */,
 				419307E228775C4700D172E7 /* AwardsView.swift in Sources */,
 				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */,
