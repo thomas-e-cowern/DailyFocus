@@ -18,7 +18,7 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
         case purchased
         case deferred
     }
-    
+
     private enum StoreError: Error {
         case invalidIdentifiers, missingProduct
     }
@@ -60,6 +60,22 @@ class UnlockManager: NSObject, ObservableObject, SKPaymentTransactionObserver, S
     }
 
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        // More to come
+        DispatchQueue.main.async {
+              // Store the returned products for later, if we need them.
+              self.loadedProducts = response.products
+
+              guard let unlock = self.loadedProducts.first else {
+                  self.requestState = .failed(StoreError.missingProduct)
+                  return
+              }
+
+              if response.invalidProductIdentifiers.isEmpty == false {
+                  print("ALERT: Received invalid product identifiers: \(response.invalidProductIdentifiers)")
+                  self.requestState = .failed(StoreError.invalidIdentifiers)
+                  return
+              }
+
+              self.requestState = .loaded(unlock)
+          }
     }
 }
