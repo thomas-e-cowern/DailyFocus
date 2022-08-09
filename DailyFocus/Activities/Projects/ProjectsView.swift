@@ -100,6 +100,10 @@ struct ProjectsView: View {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
+
+    func openURL(_ url: URL) {
+        viewModel.addProject()
+    }
 }
 
 // MARK: Preview
