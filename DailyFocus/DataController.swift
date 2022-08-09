@@ -192,6 +192,20 @@ class DataController: ObservableObject {
         return try? container.viewContext.existingObject(with: id) as? Item
     }
 
+    @discardableResult func addProject () -> Bool {
+        let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
+
+        if canCreate {
+            let project = Project(context: container.viewContext)
+            project.closed = false
+            project.creationDate = Date()
+            save()
+            return true
+        } else {
+            return false
+        }
+    }
+
     // Notifications methods
     func addReminders(for project: Project, completion: @escaping (Bool) -> Void) {
         let center = UNUserNotificationCenter.current()
