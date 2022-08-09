@@ -12,6 +12,7 @@ struct DailyFocusApp: App {
 
     @StateObject var dataController: DataController
     @StateObject var unlockManager: UnlockManager
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     init() {
         print("Inside App Init")

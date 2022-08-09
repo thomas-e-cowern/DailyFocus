@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+
+class SceneDelegate: NSObject, UIWindowSceneDelegate {
+    
+}
