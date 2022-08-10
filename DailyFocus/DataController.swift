@@ -141,27 +141,27 @@ class DataController: ObservableObject {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
 
-    func hasEarned(award: Award) -> Bool {
-        switch award.criterion {
-
-        // returns true if they added a certain number of items
-        case "items":
-            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-
-        // returns true if they completed a certain number of items
-        case "complete":
-            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
-            fetchRequest.predicate = NSPredicate(format: "completed = true")
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-
-        default:
-            // an unknown award criterion; this should never be allowed
-            return false
-        }
-    }
+//    func hasEarned(award: Award) -> Bool {
+//        switch award.criterion {
+//
+//        // returns true if they added a certain number of items
+//        case "items":
+//            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
+//            let awardCount = count(for: fetchRequest)
+//            return awardCount >= award.value
+//
+//        // returns true if they completed a certain number of items
+//        case "complete":
+//            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
+//            fetchRequest.predicate = NSPredicate(format: "completed = true")
+//            let awardCount = count(for: fetchRequest)
+//            return awardCount >= award.value
+//
+//        default:
+//            // an unknown award criterion; this should never be allowed
+//            return false
+//        }
+//    }
 
     func update(_ item: Item) {
         let itemId = item.objectID.uriRepresentation().absoluteString
