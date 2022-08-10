@@ -26,6 +26,7 @@
 		41108B8E28A3EB020090C5A5 /* DailyFocusWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41108B9428A3F08B0090C5A5 /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B9328A3F08B0090C5A5 /* DataController-Reminders.swift */; };
 		41108B9628A3F4420090C5A5 /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B9528A3F4420090C5A5 /* DataController-Awards.swift */; };
+		41108B9828A44EBE0090C5A5 /* DailyFocusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B8728A3EAF90090C5A5 /* DailyFocusWidget.swift */; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FD9289956ED00DD6C3E /* HomeViewModel.swift */; };
 		41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */; };
@@ -667,6 +668,7 @@
 				4198FDDA2859F8C500A5EAF7 /* Item-CoreDataHelpers.swift in Sources */,
 				41108B6F28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift in Sources */,
 				410571BE2894587B0071E3E4 /* ProjectsViewModel.swift in Sources */,
+				41108B9828A44EBE0090C5A5 /* DailyFocusWidget.swift in Sources */,
 				4147C553285B5870001CE424 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
