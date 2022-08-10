@@ -25,6 +25,7 @@
 		41108B8A28A3EB020090C5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41108B8928A3EB020090C5A5 /* Assets.xcassets */; };
 		41108B8E28A3EB020090C5A5 /* DailyFocusWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41108B9428A3F08B0090C5A5 /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B9328A3F08B0090C5A5 /* DataController-Reminders.swift */; };
+		41108B9628A3F4420090C5A5 /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B9528A3F4420090C5A5 /* DataController-Awards.swift */; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FD9289956ED00DD6C3E /* HomeViewModel.swift */; };
 		41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */; };
@@ -124,6 +125,7 @@
 		41108B8928A3EB020090C5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41108B8B28A3EB020090C5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41108B9328A3F08B0090C5A5 /* DataController-Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Reminders.swift"; sourceTree = "<group>"; };
+		41108B9528A3F4420090C5A5 /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
 		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		41449FD9289956ED00DD6C3E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				41108B7928A2A2E90090C5A5 /* AppDelegate.swift */,
 				41108B7B28A2A2FF0090C5A5 /* SceneDelegate.swift */,
 				41108B9328A3F08B0090C5A5 /* DataController-Reminders.swift */,
+				41108B9528A3F4420090C5A5 /* DataController-Awards.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				419158AB2850F5AE006A77CE /* ProjectsView.swift in Sources */,
 				415F662F2885E9A60029F1D4 /* ProjectSummaryView.swift in Sources */,
 				41108B7C28A2A2FF0090C5A5 /* SceneDelegate.swift in Sources */,
+				41108B9628A3F4420090C5A5 /* DataController-Awards.swift in Sources */,
 				41108B7128A185C20090C5A5 /* PurchaseButton.swift in Sources */,
 				416E9305285CA98200188473 /* ProjectHeaderView.swift in Sources */,
 				41108B7528A190CD0090C5A5 /* ProductView.swift in Sources */,
