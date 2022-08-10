@@ -19,6 +19,11 @@
 		41108B7728A192950090C5A5 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7628A192950090C5A5 /* UnlockView.swift */; };
 		41108B7A28A2A2E90090C5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7928A2A2E90090C5A5 /* AppDelegate.swift */; };
 		41108B7C28A2A2FF0090C5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B7B28A2A2FF0090C5A5 /* SceneDelegate.swift */; };
+		41108B8328A3EAF90090C5A5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41108B8228A3EAF90090C5A5 /* WidgetKit.framework */; };
+		41108B8528A3EAF90090C5A5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41108B8428A3EAF90090C5A5 /* SwiftUI.framework */; };
+		41108B8828A3EAF90090C5A5 /* DailyFocusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41108B8728A3EAF90090C5A5 /* DailyFocusWidget.swift */; };
+		41108B8A28A3EB020090C5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41108B8928A3EB020090C5A5 /* Assets.xcassets */; };
+		41108B8E28A3EB020090C5A5 /* DailyFocusWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41256DB8288AFC94003C379A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41256DB7288AFC94003C379A /* ExtensionTests.swift */; };
 		41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FD9289956ED00DD6C3E /* HomeViewModel.swift */; };
 		41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */; };
@@ -66,6 +71,13 @@
 			remoteGlobalIDString = 4195300F284FC5E100EDF104;
 			remoteInfo = DailyFocus;
 		};
+		41108B8C28A3EB020090C5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41953008284FC5E000EDF104 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41108B8028A3EAF90090C5A5;
+			remoteInfo = DailyFocusWidgetExtension;
+		};
 		417FE13B2888528500F23E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 41953008284FC5E000EDF104 /* Project object */;
@@ -74,6 +86,20 @@
 			remoteInfo = DailyFocus;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		41108B9228A3EB020090C5A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				41108B8E28A3EB020090C5A5 /* DailyFocusWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		410571BD2894587B0071E3E4 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +116,12 @@
 		41108B7628A192950090C5A5 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		41108B7928A2A2E90090C5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41108B7B28A2A2FF0090C5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyFocusWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		41108B8228A3EAF90090C5A5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		41108B8428A3EAF90090C5A5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		41108B8728A3EAF90090C5A5 /* DailyFocusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusWidget.swift; sourceTree = "<group>"; };
+		41108B8928A3EB020090C5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41108B8B28A3EB020090C5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41256DB7288AFC94003C379A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		41449FD9289956ED00DD6C3E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		41449FDB289978BB00DD6C3E /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +176,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41108B7E28A3EAF90090C5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41108B8528A3EAF90090C5A5 /* SwiftUI.framework in Frameworks */,
+				41108B8328A3EAF90090C5A5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		417FE1342888528500F23E2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +221,16 @@
 				41108B7628A192950090C5A5 /* UnlockView.swift */,
 			);
 			path = Unlock;
+			sourceTree = "<group>";
+		};
+		41108B8628A3EAF90090C5A5 /* DailyFocusWidget */ = {
+			isa = PBXGroup;
+			children = (
+				41108B8728A3EAF90090C5A5 /* DailyFocusWidget.swift */,
+				41108B8928A3EB020090C5A5 /* Assets.xcassets */,
+				41108B8B28A3EB020090C5A5 /* Info.plist */,
+			);
+			path = DailyFocusWidget;
 			sourceTree = "<group>";
 		};
 		414308F92887DFFA002D11F6 /* Activities */ = {
@@ -289,6 +340,7 @@
 				41953012284FC5E100EDF104 /* DailyFocus */,
 				417FE1382888528500F23E2E /* DailyFocusTests */,
 				411027A52891DB7A0084B93F /* DailyFocusUITests */,
+				41108B8628A3EAF90090C5A5 /* DailyFocusWidget */,
 				41953011284FC5E100EDF104 /* Products */,
 				41953028284FE07100EDF104 /* Frameworks */,
 			);
@@ -300,6 +352,7 @@
 				41953010284FC5E100EDF104 /* DailyFocus.app */,
 				417FE1372888528500F23E2E /* DailyFocusTests.xctest */,
 				411027A42891DB7A0084B93F /* DailyFocusUITests.xctest */,
+				41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				41953029284FE07100EDF104 /* CloudKit.framework */,
+				41108B8228A3EAF90090C5A5 /* WidgetKit.framework */,
+				41108B8428A3EAF90090C5A5 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -372,6 +427,23 @@
 			productReference = 411027A42891DB7A0084B93F /* DailyFocusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		41108B8028A3EAF90090C5A5 /* DailyFocusWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41108B8F28A3EB020090C5A5 /* Build configuration list for PBXNativeTarget "DailyFocusWidgetExtension" */;
+			buildPhases = (
+				41108B7D28A3EAF90090C5A5 /* Sources */,
+				41108B7E28A3EAF90090C5A5 /* Frameworks */,
+				41108B7F28A3EAF90090C5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyFocusWidgetExtension;
+			productName = DailyFocusWidgetExtension;
+			productReference = 41108B8128A3EAF90090C5A5 /* DailyFocusWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		417FE1362888528500F23E2E /* DailyFocusTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 417FE13F2888528500F23E2E /* Build configuration list for PBXNativeTarget "DailyFocusTests" */;
@@ -398,10 +470,12 @@
 				4195300D284FC5E100EDF104 /* Frameworks */,
 				4195300E284FC5E100EDF104 /* Resources */,
 				414308F82887D7DD002D11F6 /* SwiftLint */,
+				41108B9228A3EB020090C5A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				41108B8D28A3EB020090C5A5 /* PBXTargetDependency */,
 			);
 			name = DailyFocus;
 			productName = DailyFocus;
@@ -421,6 +495,9 @@
 					411027A32891DB7A0084B93F = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 4195300F284FC5E100EDF104;
+					};
+					41108B8028A3EAF90090C5A5 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 					417FE1362888528500F23E2E = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -448,6 +525,7 @@
 				4195300F284FC5E100EDF104 /* DailyFocus */,
 				417FE1362888528500F23E2E /* DailyFocusTests */,
 				411027A32891DB7A0084B93F /* DailyFocusUITests */,
+				41108B8028A3EAF90090C5A5 /* DailyFocusWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -457,6 +535,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41108B7F28A3EAF90090C5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41108B8A28A3EB020090C5A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +598,14 @@
 			files = (
 				411027A72891DB7A0084B93F /* DailyFocusUITests.swift in Sources */,
 				411027A92891DB7A0084B93F /* DailyFocusUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41108B7D28A3EAF90090C5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41108B8828A3EAF90090C5A5 /* DailyFocusWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +668,11 @@
 			isa = PBXTargetDependency;
 			target = 4195300F284FC5E100EDF104 /* DailyFocus */;
 			targetProxy = 411027AA2891DB7A0084B93F /* PBXContainerItemProxy */;
+		};
+		41108B8D28A3EB020090C5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41108B8028A3EAF90090C5A5 /* DailyFocusWidgetExtension */;
+			targetProxy = 41108B8C28A3EB020090C5A5 /* PBXContainerItemProxy */;
 		};
 		417FE13C2888528500F23E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -644,6 +743,60 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DailyFocus;
+			};
+			name = Release;
+		};
+		41108B9028A3EB020090C5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyFocusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DailyFocusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.DailyFocus.DailyFocusWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41108B9128A3EB020090C5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyFocusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DailyFocusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.DailyFocus.DailyFocusWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -800,6 +953,7 @@
 		4195301F284FC5EB00EDF104 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyFocus/DailyFocus.entitlements;
@@ -832,6 +986,7 @@
 		41953020284FC5EB00EDF104 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyFocus/DailyFocus.entitlements;
@@ -869,6 +1024,15 @@
 			buildConfigurations = (
 				411027AD2891DB7B0084B93F /* Debug */,
 				411027AE2891DB7B0084B93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41108B8F28A3EB020090C5A5 /* Build configuration list for PBXNativeTarget "DailyFocusWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41108B9028A3EB020090C5A5 /* Debug */,
+				41108B9128A3EB020090C5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
