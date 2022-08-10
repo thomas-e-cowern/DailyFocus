@@ -38,7 +38,7 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
 }
 
-struct DailyFocusWidgetEntryView : View {
+struct DailyFocusWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
