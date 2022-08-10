@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), item: [Item.example])
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void ) {
@@ -62,7 +62,7 @@ struct DailyFocusWidget: Widget {
 
 struct DailyFocusWidget_Previews: PreviewProvider {
     static var previews: some View {
-        DailyFocusWidgetEntryView(entry: SimpleEntry(date: Date()))
+        DailyFocusWidgetEntryView(entry: SimpleEntry(date: Date(), item: [Item.example]))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
