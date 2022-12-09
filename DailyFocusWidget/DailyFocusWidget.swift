@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), items: [Item.example])
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), items: [Item.example])
         completion(entry)
     }
 
@@ -25,7 +25,7 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+            let entry = SimpleEntry(date: entryDate, items: [Item.example])
             entries.append(entry)
         }
 
@@ -36,6 +36,7 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    let items: [Item]
 }
 
 struct DailyFocusWidgetEntryView : View {
@@ -60,7 +61,7 @@ struct DailyFocusWidget: Widget {
 
 struct DailyFocusWidget_Previews: PreviewProvider {
     static var previews: some View {
-        DailyFocusWidgetEntryView(entry: SimpleEntry(date: Date()))
+        DailyFocusWidgetEntryView(entry: SimpleEntry(date: Date(), items: [Item.example]))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
