@@ -257,4 +257,8 @@ class DataController: ObservableObject {
         itemRequest.fetchLimit = count
         return itemRequest
     }
+    
+    func results<T: NSManagedObject>(for fetchRequest: NSFetchRequest<T>) -> [T] {
+        return (try? container.viewContext.fetch(fetchRequest)) ?? []
+    }
 }
