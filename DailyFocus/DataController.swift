@@ -244,4 +244,17 @@ class DataController: ObservableObject {
             SKStoreReviewController.requestReview(in: windowScene)
         }
     }
+    
+    func fetchRequestForTopItems(count: Int) -> NSFetchRequest <Item> {
+        let itemRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        let completedPredicate = NSPredicate(format: "completed = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+        itemRequest.predicate = compoundPredicate
+
+        itemRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
+
+        itemRequest.fetchLimit = count
+        return itemRequest
+    }
 }
