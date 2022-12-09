@@ -32,6 +32,12 @@ struct Provider: TimelineProvider {
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
+    
+    func loadItems() -> [Item] {
+        let dataController = DataController()
+        let itemRequest = dataController.fetchRequestForTopItems(count: 1)
+        return dataController.results(for: itemRequest)
+    }
 }
 
 struct SimpleEntry: TimelineEntry {
