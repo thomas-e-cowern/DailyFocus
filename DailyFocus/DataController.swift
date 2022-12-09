@@ -291,6 +291,7 @@ class DataController: ObservableObject {
     }
 
     // Sets up app to call for a review
+    @available(iOSApplicationExtension, unavailable)
     func appLaunched() {
         // 5 projects and they get asked for a review
         guard count(for: Project.fetchRequest()) >= 5 else {
