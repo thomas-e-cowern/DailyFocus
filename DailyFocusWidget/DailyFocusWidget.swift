@@ -42,7 +42,7 @@ struct DailyFocusWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("up Next...")
+            Text("Up Next...")
                 .font(.title)
             
             if let item = entry.items.first {
