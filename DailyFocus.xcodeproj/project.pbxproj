@@ -177,6 +177,7 @@
 		4D2239E029431ADA000BA256 /* DailyFocusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusWidget.swift; sourceTree = "<group>"; };
 		4D2239E229431ADB000BA256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2239E429431ADB000BA256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D2239F029432C39000BA256 /* DailyFocusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyFocusWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +339,7 @@
 		41953007284FC5E000EDF104 = {
 			isa = PBXGroup;
 			children = (
+				4D2239F029432C39000BA256 /* DailyFocusWidgetExtension.entitlements */,
 				41953012284FC5E100EDF104 /* DailyFocus */,
 				417FE1382888528500F23E2E /* DailyFocusTests */,
 				411027A52891DB7A0084B93F /* DailyFocusUITests */,
@@ -992,6 +994,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = DailyFocusWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
@@ -1021,6 +1024,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = DailyFocusWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
