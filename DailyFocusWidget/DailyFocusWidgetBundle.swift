@@ -9,6 +9,12 @@ import WidgetKit
 import SwiftUI
 
 @main
+struct DaikyFocusWidgets: WidgetBundle {
+    var body: some Widget {
+        SimpleDailyFocusWidget()
+    }
+}
+
 struct DailyFocusWidgetBundle: WidgetBundle {
     var body: some Widget {
         SimpleDailyFocusWidget()
