@@ -27,7 +27,7 @@ struct Provider: TimelineProvider {
     
     func loadItems() -> [Item] {
         let dataController = DataController()
-        let itemRequest = dataController.fetchRequestForTopItems(count: 1)
+        let itemRequest = dataController.fetchRequestForTopItems(count: 5)
         return dataController.results(for: itemRequest)
     }
 }
@@ -64,6 +64,14 @@ struct SimpleDailyFocusWidget: Widget {
         .configurationDisplayName("Up next…")
         .description("TYour #1 top-priority item.")
         .supportedFamilies([.systemSmall])
+    }
+}
+
+struct DailyFocusWidgetMultipleEntryView: View {
+    var entry: Provider.Entry
+
+    var body: some View {
+        Text("Hello, world!")
     }
 }
 
