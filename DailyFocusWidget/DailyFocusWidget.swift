@@ -69,10 +69,27 @@ struct SimpleDailyFocusWidget: Widget {
 
 struct DailyFocusWidgetMultipleEntryView: View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var widgetFamily
+    
+    var items: ArraySlice<Item> {
+        let itemCount: Int
+
+        switch widgetFamily {
+        case .systemSmall:
+            itemCount = 1
+        case .systemLarge:
+            itemCount = 4
+        default:
+            itemCount = 2
+        }
+
+        return entry.items.prefix(itemCount)
+    }
 
     var body: some View {
         VStack(spacing: 5) {
-            ForEach(entry.items) { item in
+            ForEach(items) { item in
                 HStack {
                     Color(item.project?.color ?? "Light Blue")
                         .frame(width: 5)
@@ -81,6 +98,7 @@ struct DailyFocusWidgetMultipleEntryView: View {
                     VStack(alignment: .leading) {
                         Text(item.itemTitle)
                             .font(.headline)
+                            .layoutPriority(1)
 
                         if let projectTitle = item.project?.title {
                             Text(projectTitle)
@@ -92,7 +110,9 @@ struct DailyFocusWidgetMultipleEntryView: View {
                 }
             }
         }
-        .padding(20)    }
+        .padding(20)
+    }
+    
 }
 
 struct ComplexDailyFocusWidget: Widget {
