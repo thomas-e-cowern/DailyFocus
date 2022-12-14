@@ -71,17 +71,26 @@ struct DailyFocusWidgetMultipleEntryView: View {
     var entry: Provider.Entry
     
     @Environment(\.widgetFamily) var widgetFamily
+    @Environment(\.sizeCategory) var sizeCategory
     
     var items: ArraySlice<Item> {
         let itemCount: Int
 
         switch widgetFamily {
-        case .systemSmall:
-            itemCount = 1
-        case .systemLarge:
-            itemCount = 4
-        default:
-            itemCount = 2
+            case .systemSmall:
+                itemCount = 1
+            case .systemLarge:
+                if sizeCategory < .extraExtraLarge {
+                    itemCount = 5
+                } else {
+                    itemCount = 4
+                }
+            default:
+                if sizeCategory < .extraLarge {
+                    itemCount = 3
+                } else {
+                    itemCount = 2
+                }
         }
 
         return entry.items.prefix(itemCount)
