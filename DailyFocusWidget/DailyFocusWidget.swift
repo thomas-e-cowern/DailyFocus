@@ -54,8 +54,8 @@ struct DailyFocusWidgetEntryView : View {
     }
 }
 
-struct DailyFocusWidget: Widget {
-    let kind: String = "DailyFocusWidget"
+struct SimpleDailyFocusWidget: Widget {
+    let kind: String = "SimpleDailyFocusWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
