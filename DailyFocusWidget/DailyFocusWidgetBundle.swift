@@ -12,6 +12,7 @@ import SwiftUI
 struct DaikyFocusWidgets: WidgetBundle {
     var body: some Widget {
         SimpleDailyFocusWidget()
+        ComplexDailyFocusWidget()
     }
 }
 
