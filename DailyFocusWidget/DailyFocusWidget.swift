@@ -71,8 +71,28 @@ struct DailyFocusWidgetMultipleEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text("Hello, world!")
-    }
+        VStack(spacing: 5) {
+            ForEach(entry.items) { item in
+                HStack {
+                    Color(item.project?.color ?? "Light Blue")
+                        .frame(width: 5)
+                        .clipShape(Capsule())
+
+                    VStack(alignment: .leading) {
+                        Text(item.itemTitle)
+                            .font(.headline)
+
+                        if let projectTitle = item.project?.title {
+                            Text(projectTitle)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+
+                    Spacer()
+                }
+            }
+        }
+        .padding(20)    }
 }
 
 struct ComplexDailyFocusWidget: Widget {
