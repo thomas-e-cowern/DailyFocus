@@ -61,8 +61,8 @@ struct DailyFocusWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             DailyFocusWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Up next…")
+        .description("TYour #1 top-priority item.")
         .supportedFamilies([.systemSmall])
     }
 }
