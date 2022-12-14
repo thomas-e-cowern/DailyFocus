@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct DailyFocusWidgetBundle: WidgetBundle {
     var body: some Widget {
-        DailyFocusWidget()
+        SimpleDailyFocusWidget()
         DailyFocusWidgetLiveActivity()
     }
 }
