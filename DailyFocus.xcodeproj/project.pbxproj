@@ -68,6 +68,7 @@
 		4D2239EB2943214E000BA256 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41953021284FCFB500EDF104 /* Main.xcdatamodeld */; };
 		4D2239EC2943217C000BA256 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198FDD92859F8C500A5EAF7 /* Item-CoreDataHelpers.swift */; };
 		4D2239ED29432189000BA256 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953024284FD43F00EDF104 /* DataController.swift */; };
+		4D35F1C5294A8FD900930E6E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35F1C4294A8FD900930E6E /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,7 @@
 		4D2239E229431ADB000BA256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2239E429431ADB000BA256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2239F029432C39000BA256 /* DailyFocusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyFocusWidgetExtension.entitlements; sourceTree = "<group>"; };
+		4D35F1C4294A8FD900930E6E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +419,7 @@
 				4D2239DC29431ADA000BA256 /* DailyFocusWidgetBundle.swift */,
 				4D2239DE29431ADA000BA256 /* DailyFocusWidgetLiveActivity.swift */,
 				4D2239E029431ADA000BA256 /* DailyFocusWidget.swift */,
+				4D35F1C4294A8FD900930E6E /* DataProvider.swift */,
 				4D2239E229431ADB000BA256 /* Assets.xcassets */,
 				4D2239E429431ADB000BA256 /* Info.plist */,
 			);
@@ -666,6 +669,7 @@
 				41953014284FC5E100EDF104 /* DailyFocusApp.swift in Sources */,
 				41449FDC289978BB00DD6C3E /* ItemRowViewModel.swift in Sources */,
 				4198FDDA2859F8C500A5EAF7 /* Item-CoreDataHelpers.swift in Sources */,
+				4D35F1C5294A8FD900930E6E /* DataProvider.swift in Sources */,
 				41108B6F28A16FFA0090C5A5 /* SKProduct-LocalizedPrice.swift in Sources */,
 				410571BE2894587B0071E3E4 /* ProjectsViewModel.swift in Sources */,
 				4147C553285B5870001CE424 /* EditItemView.swift in Sources */,
