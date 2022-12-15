@@ -16,17 +16,7 @@ import SwiftUI
 
 
 
-struct ComplexDailyFocusWidget: Widget {
-    let kind: String = "ComplexDailyFocusWidget"
 
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            DailyFocusWidgetMultipleEntryView(entry: entry)
-        }
-        .configurationDisplayName("Up next…")
-        .description("Your most important items.")
-    }
-}
 
 struct DailyFocusWidget_Previews: PreviewProvider {
     static var previews: some View {
