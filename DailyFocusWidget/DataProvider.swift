@@ -1,16 +1,14 @@
 //
 //  DataProvider.swift
-//  DailyFocus
+//  DailyFocusWidgetExtension
 //
-//  Created by Thomas Cowern on 12/14/22.
+//  Created by Thomas Cowern on 12/15/22.
 //
 
 import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    typealias Entry = SimpleEntry
-    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), items: [Item.example])
     }
