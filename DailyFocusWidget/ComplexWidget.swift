@@ -75,3 +75,10 @@ struct ComplexDailyFocusWidget: Widget {
         .description("Your most important items.")
     }
 }
+
+struct ComplexWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        DailyFocusWidgetMultipleEntryView(entry: SimpleEntry(date: Date(), items: [Item.example]))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
