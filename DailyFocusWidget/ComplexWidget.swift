@@ -41,7 +41,7 @@ struct DailyFocusWidgetMultipleEntryView: View {
             ForEach(items) { item in
                 HStack {
                    Circle()
-                        .fill(Color(item.project?.color ?? "blue"))
+                        .fill(Color("Light Blue"))
                         .frame(width: 10)
 //                    Color(item.project?.color ?? "Light Blue")
 //                        .frame(width: 50)
