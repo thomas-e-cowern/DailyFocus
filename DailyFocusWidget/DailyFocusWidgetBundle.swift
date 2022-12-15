@@ -11,14 +11,7 @@ import SwiftUI
 @main
 struct DaikyFocusWidgets: WidgetBundle {
     var body: some Widget {
-//        SimpleDailyFocusWidget()
-        ComplexDailyFocusWidget()
-    }
-}
-
-struct DailyFocusWidgetBundle: WidgetBundle {
-    var body: some Widget {
         SimpleDailyFocusWidget()
-        DailyFocusWidgetLiveActivity()
+        ComplexDailyFocusWidget()
     }
 }
