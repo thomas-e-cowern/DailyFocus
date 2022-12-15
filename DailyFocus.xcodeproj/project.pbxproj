@@ -70,6 +70,7 @@
 		4D2239ED29432189000BA256 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41953024284FD43F00EDF104 /* DataController.swift */; };
 		4D4C29A0294B352A002DBFC5 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C299F294B352A002DBFC5 /* DataProvider.swift */; };
 		4D4C29A2294B35E8002DBFC5 /* SimpleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */; };
+		4D4C29A4294B36BB002DBFC5 /* ComplexWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C29A3294B36BB002DBFC5 /* ComplexWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		4D35F1C6294B326800930E6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4D4C299F294B352A002DBFC5 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWidget.swift; sourceTree = "<group>"; };
+		4D4C29A3294B36BB002DBFC5 /* ComplexWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,10 +425,11 @@
 				4D2239DE29431ADA000BA256 /* DailyFocusWidgetLiveActivity.swift */,
 				4D2239E029431ADA000BA256 /* DailyFocusWidget.swift */,
 				4D4C299F294B352A002DBFC5 /* DataProvider.swift */,
+				4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */,
 				4D2239E229431ADB000BA256 /* Assets.xcassets */,
 				4D35F1C6294B326800930E6E /* Colors.xcassets */,
 				4D2239E429431ADB000BA256 /* Info.plist */,
-				4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */,
+				4D4C29A3294B36BB002DBFC5 /* ComplexWidget.swift */,
 			);
 			path = DailyFocusWidget;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				4D2239ED29432189000BA256 /* DataController.swift in Sources */,
 				4D2239EC2943217C000BA256 /* Item-CoreDataHelpers.swift in Sources */,
 				4D4C29A2294B35E8002DBFC5 /* SimpleWidget.swift in Sources */,
+				4D4C29A4294B36BB002DBFC5 /* ComplexWidget.swift in Sources */,
 				4D4C29A0294B352A002DBFC5 /* DataProvider.swift in Sources */,
 				4D2239DD29431ADA000BA256 /* DailyFocusWidgetBundle.swift in Sources */,
 				4D2239EB2943214E000BA256 /* Main.xcdatamodeld in Sources */,
