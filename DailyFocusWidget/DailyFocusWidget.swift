@@ -18,9 +18,4 @@ import SwiftUI
 
 
 
-struct DailyFocusWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyFocusWidgetEntryView(entry: SimpleEntry(date: Date(), items: [Item.example]))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+
