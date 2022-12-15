@@ -180,6 +180,7 @@
 		4D2239E429431ADB000BA256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2239F029432C39000BA256 /* DailyFocusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyFocusWidgetExtension.entitlements; sourceTree = "<group>"; };
 		4D35F1C4294A8FD900930E6E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		4D35F1C6294B326800930E6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +422,7 @@
 				4D2239E029431ADA000BA256 /* DailyFocusWidget.swift */,
 				4D35F1C4294A8FD900930E6E /* DataProvider.swift */,
 				4D2239E229431ADB000BA256 /* Assets.xcassets */,
+				4D35F1C6294B326800930E6E /* Colors.xcassets */,
 				4D2239E429431ADB000BA256 /* Info.plist */,
 			);
 			path = DailyFocusWidget;
