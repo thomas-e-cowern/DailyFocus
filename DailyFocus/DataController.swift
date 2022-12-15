@@ -231,19 +231,19 @@ class DataController: ObservableObject {
     }
 
     // Sets up app to call for a review
-    @available(iOSApplicationExtension, unavailable)
-    func appLaunched() {
-        // 5 projects and they get asked for a review
-        guard count(for: Project.fetchRequest()) >= 5 else {
-            return
-        }
-        let allScenes = UIApplication.shared.connectedScenes
-        let scene = allScenes.first { $0.activationState == .foregroundActive }
-
-        if let windowScene = scene as? UIWindowScene {
-            SKStoreReviewController.requestReview(in: windowScene)
-        }
-    }
+//    @available(iOSApplicationExtension, unavailable)
+//    func appLaunched() {
+//        // 5 projects and they get asked for a review
+//        guard count(for: Project.fetchRequest()) >= 5 else {
+//            return
+//        }
+//        let allScenes = UIApplication.shared.connectedScenes
+//        let scene = allScenes.first { $0.activationState == .foregroundActive }
+//
+//        if let windowScene = scene as? UIWindowScene {
+//            SKStoreReviewController.requestReview(in: windowScene)
+//        }
+//    }
     
     func fetchRequestForTopItems(count: Int) -> NSFetchRequest <Item> {
         let itemRequest: NSFetchRequest<Item> = Item.fetchRequest()
