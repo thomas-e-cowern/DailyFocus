@@ -24,3 +24,16 @@ struct DailyFocusWidgetEntryView : View {
         }
     }
 }
+
+struct SimpleDailyFocusWidget: Widget {
+    let kind: String = "SimpleDailyFocusWidget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            DailyFocusWidgetEntryView(entry: entry)
+        }
+        .configurationDisplayName("Up next…")
+        .description("TYour #1 top-priority item.")
+        .supportedFamilies([.systemSmall])
+    }
+}
