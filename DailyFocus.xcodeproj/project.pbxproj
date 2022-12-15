@@ -70,6 +70,7 @@
 		4D4C29A0294B352A002DBFC5 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C299F294B352A002DBFC5 /* DataProvider.swift */; };
 		4D4C29A2294B35E8002DBFC5 /* SimpleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */; };
 		4D4C29A4294B36BB002DBFC5 /* ComplexWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C29A3294B36BB002DBFC5 /* ComplexWidget.swift */; };
+		4D4C29A6294B3C66002DBFC5 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C29A5294B3C66002DBFC5 /* DataController-StoreKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		4D4C299F294B352A002DBFC5 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		4D4C29A1294B35E8002DBFC5 /* SimpleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWidget.swift; sourceTree = "<group>"; };
 		4D4C29A3294B36BB002DBFC5 /* ComplexWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWidget.swift; sourceTree = "<group>"; };
+		4D4C29A5294B3C66002DBFC5 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 				41108B7B28A2A2FF0090C5A5 /* SceneDelegate.swift */,
 				41108B9328A3F08B0090C5A5 /* DataController-Reminders.swift */,
 				41108B9528A3F4420090C5A5 /* DataController-Awards.swift */,
+				4D4C29A5294B3C66002DBFC5 /* DataController-StoreKit.swift */,
 			);
 			path = DailyFocus;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				419307E228775C4700D172E7 /* AwardsView.swift in Sources */,
 				41953023284FCFB800EDF104 /* Main.xcdatamodeld in Sources */,
 				41449FDA289956ED00DD6C3E /* HomeViewModel.swift in Sources */,
+				4D4C29A6294B3C66002DBFC5 /* DataController-StoreKit.swift in Sources */,
 				41108B6C28A042510090C5A5 /* UnlockManager.swift in Sources */,
 				4198FDDC2859FFB300A5EAF7 /* Project-CoreDataHelpers.swift in Sources */,
 				4146F519287C6220007680E2 /* Color-Additions.swift in Sources */,
