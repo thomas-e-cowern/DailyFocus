@@ -40,9 +40,10 @@ struct DailyFocusWidgetMultipleEntryView: View {
         VStack(spacing: 5) {
             ForEach(items) { item in
                 HStack {
-                   Circle()
-                        .fill(Color(item.project?.color ?? "Light Blue"))
-                        .frame(width: 10)
+//                   Circle()
+                        Color(item.project?.color ?? "Light Blue")
+                        .frame(width: 5)
+                        .clipShape(Capsule())
 //                    Color(item.project?.color ?? "Light Blue")
 //                        .frame(width: 50)
 //                        .clipShape(Capsule())
